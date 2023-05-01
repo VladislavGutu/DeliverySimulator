@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 
@@ -17,14 +18,15 @@ namespace SBPScripts
         public GameObject inactiveColliders;
         BicycleController bicycleController;
         Rigidbody rb;
+        
         void Start()
         {
             bicycleController = GetComponent<BicycleController>();
             rb = GetComponent<Rigidbody>();
             if (onBike)
-                    StartCoroutine(BikeStand(1));
-                else
-                    StartCoroutine(BikeStand(0));
+                StartCoroutine(BikeStand(1));
+            else
+                StartCoroutine(BikeStand(0));
 
         }
         void OnCollisionEnter(Collision collision)

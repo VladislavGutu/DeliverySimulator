@@ -40,6 +40,8 @@ namespace SickscoreGames.HUDNavigationSystem
 		public _UpdateMode UpdateMode = _UpdateMode.LateUpdate;
 		public bool KeepAliveOnLoad = true;
 
+		public List<GameObject> _compassPrefabList = new List<GameObject>();
+		
 		// RADAR
 		[Tooltip("Enable, if you want to use the radar feature.")]
 		public bool useRadar = true;

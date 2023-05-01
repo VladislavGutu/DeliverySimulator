@@ -247,6 +247,7 @@ namespace SickscoreGames.HUDNavigationSystem
 			GameObject compassBarGO = Instantiate (Prefabs.CompassBarPrefab.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
 			compassBarGO.transform.SetParent (HUDNavigationCanvas.Instance.CompassBar.ElementContainer, false);
 			compassBarGO.SetActive (false);
+			HUDNavigationSystem.Instance._compassPrefabList.Add(compassBarGO);
 
 			// assign compass bar prefab
 			CompassBar = compassBarGO.GetComponent<HNSCompassBarPrefab> ();

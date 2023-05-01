@@ -58,7 +58,6 @@ namespace SBPScripts
             {
                 wantedHeight = target.position.y + height;
                 currentHeight = transform.position.y;
-
                 wantedRotationAngle = target.eulerAngles.y;
                 currentRotationAngle = transform.eulerAngles.y;
                 if (perfectMouseLook.movement == false)
