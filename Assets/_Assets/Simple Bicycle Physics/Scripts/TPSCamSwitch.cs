@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 namespace SBPScripts
@@ -14,8 +15,8 @@ namespace SBPScripts
         public PerfectMouseLook _FPSCameraControll;
         void Start()
         {
-            bicycleCamera = FindObjectOfType<BicycleCamera>();
-            bicycleStatus = FindObjectOfType<BicycleStatus>();
+            bicycleCamera = GetComponent<BicycleCamera>();
+            bicycleStatus = GetComponent<BicycleStatus>();
         }
         void LateUpdate()
         {
@@ -30,7 +31,6 @@ namespace SBPScripts
                     bicycleCamera.target = cyclist.transform.root.transform;
                 }
             }
-            
             
             if (bicycleStatus.dislodged && bicycleStatus.instantiatedRagdoll!=null)
             {

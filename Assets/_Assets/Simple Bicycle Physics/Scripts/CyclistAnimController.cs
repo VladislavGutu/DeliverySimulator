@@ -42,42 +42,71 @@ namespace SBPScripts
 
         void Update()
         {
-            if (cyclist != null && externalCharacter != null)
+            if (bicycleController._photonView.IsMine)
             {
-                if (Input.GetKeyDown(KeyCode.Return) && bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z <= 0.1f && waitTime == 0)
+                if (cyclist != null && externalCharacter != null)
                 {
-                    waitTime = 1.5f;
-                    externalCharacter.transform.position = cyclist.transform.root.position - transform.right * 0.5f + transform.forward * 0.1f;
-                    bicycleStatus.onBike = !bicycleStatus.onBike;
-                    if (bicycleStatus.onBike)
+                    if (Input.GetKeyDown(KeyCode.Return) && bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z <= 0.1f && waitTime == 0)
                     {
-                        if(prevLocalPosX<0)
-                        anim.Play("OnBike");
+                        waitTime = 1.5f;
+                        externalCharacter.transform.position = cyclist.transform.root.position - transform.right * 0.5f + transform.forward * 0.1f;
+                        bicycleStatus.onBike = !bicycleStatus.onBike;
+                        if (bicycleStatus.onBike)
+                        {
+                            if(prevLocalPosX<0)
+                            anim.Play("OnBike");
+                            else
+                            anim.Play("OnBikeFlipped");
+                            StartCoroutine(AdjustRigWeight(0));
+                        }
                         else
-                        anim.Play("OnBikeFlipped");
-                        StartCoroutine(AdjustRigWeight(0));
+                        {
+                            anim.Play("OffBike");
+                            StartCoroutine(AdjustRigWeight(1));
+                        }
+                    }
+                    prevLocalPosX = externalCharacter.transform.localPosition.x;
+                }
+                waitTime -= Time.deltaTime;
+                waitTime = Mathf.Clamp(waitTime, 0, 1.5f);
+
+
+                speed = bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z;
+                isAirborne = bicycleController.isAirborne;
+                anim.SetFloat("Speed", speed);
+                anim.SetBool("isAirborne", isAirborne);
+                if (bicycleStatus != null)
+                {
+                    if (bicycleStatus.dislodged == false)
+                    {
+                        if (!bicycleController.isAirborne && bicycleStatus.onBike)
+                        {
+                            clipInfoCurrent = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+                            if (clipInfoCurrent == "IdleToStart" && clipInfoLast == "Idle")
+                                StartCoroutine(LeftFootIK(0));
+                            if (clipInfoCurrent == "Idle" && clipInfoLast == "IdleToStart")
+                                StartCoroutine(LeftFootIK(1));
+                            if (clipInfoCurrent == "Idle" && clipInfoLast == "Reverse")
+                                StartCoroutine(LeftFootIdleIK(0));
+                            if (clipInfoCurrent == "Reverse" && clipInfoLast == "Idle")
+                                StartCoroutine(LeftFootIdleIK(1));
+
+                            clipInfoLast = clipInfoCurrent;
+                        }
                     }
                     else
                     {
-                        anim.Play("OffBike");
-                        StartCoroutine(AdjustRigWeight(1));
+                        cyclist.SetActive(false);
+                        if(Input.GetKeyDown(KeyCode.R))
+                        {
+                            cyclist.SetActive(true);
+                            bicycleStatus.dislodged = false;
+                        }
                     }
                 }
-                prevLocalPosX = externalCharacter.transform.localPosition.x;
-            }
-            waitTime -= Time.deltaTime;
-            waitTime = Mathf.Clamp(waitTime, 0, 1.5f);
-
-
-            speed = bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z;
-            isAirborne = bicycleController.isAirborne;
-            anim.SetFloat("Speed", speed);
-            anim.SetBool("isAirborne", isAirborne);
-            if (bicycleStatus != null)
-            {
-                if (bicycleStatus.dislodged == false)
+                else
                 {
-                    if (!bicycleController.isAirborne && bicycleStatus.onBike)
+                    if (!bicycleController.isAirborne)
                     {
                         clipInfoCurrent = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
                         if (clipInfoCurrent == "IdleToStart" && clipInfoLast == "Idle")
@@ -91,32 +120,6 @@ namespace SBPScripts
 
                         clipInfoLast = clipInfoCurrent;
                     }
-                }
-                else
-                {
-                    cyclist.SetActive(false);
-                    if(Input.GetKeyDown(KeyCode.R))
-                    {
-                        cyclist.SetActive(true);
-                        bicycleStatus.dislodged = false;
-                    }
-                }
-            }
-            else
-            {
-                if (!bicycleController.isAirborne)
-                {
-                    clipInfoCurrent = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
-                    if (clipInfoCurrent == "IdleToStart" && clipInfoLast == "Idle")
-                        StartCoroutine(LeftFootIK(0));
-                    if (clipInfoCurrent == "Idle" && clipInfoLast == "IdleToStart")
-                        StartCoroutine(LeftFootIK(1));
-                    if (clipInfoCurrent == "Idle" && clipInfoLast == "Reverse")
-                        StartCoroutine(LeftFootIdleIK(0));
-                    if (clipInfoCurrent == "Reverse" && clipInfoLast == "Idle")
-                        StartCoroutine(LeftFootIdleIK(1));
-
-                    clipInfoLast = clipInfoCurrent;
                 }
             }
         }

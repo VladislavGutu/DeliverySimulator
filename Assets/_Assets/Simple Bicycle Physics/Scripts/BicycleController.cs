@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 // Please use using SBPScripts; directive to refer to or append the SBP library
@@ -146,29 +147,35 @@ namespace SBPScripts
 
         public bool canSprint = true;
 
+        public PhotonView _photonView;
         void Awake()
-        {
+        {           
+            _photonView = GetComponent<PhotonView>();
+
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
 
         void Start()
         {
-            rb = GetComponent<Rigidbody>();
-            rb.maxAngularVelocity = Mathf.Infinity;
+            if (_photonView.IsMine)
+            {
+                rb = GetComponent<Rigidbody>();
+                rb.maxAngularVelocity = Mathf.Infinity;
 
-            fWheelRb = fPhysicsWheel.GetComponent<Rigidbody>();
-            fWheelRb.maxAngularVelocity = Mathf.Infinity;
+                fWheelRb = fPhysicsWheel.GetComponent<Rigidbody>();
+                fWheelRb.maxAngularVelocity = Mathf.Infinity;
 
-            rWheelRb = rPhysicsWheel.GetComponent<Rigidbody>();
-            rWheelRb.maxAngularVelocity = Mathf.Infinity;
+                rWheelRb = rPhysicsWheel.GetComponent<Rigidbody>();
+                rWheelRb.maxAngularVelocity = Mathf.Infinity;
 
-            currentTopSpeed = topSpeed;
+                currentTopSpeed = topSpeed;
 
-            initialHandlesRotation = cycleGeometry.handles.transform.localRotation;
-            initialLowerForkLocalRotaion = cycleGeometry.lowerFork.transform.localRotation;
+                initialHandlesRotation = cycleGeometry.handles.transform.localRotation;
+                initialLowerForkLocalRotaion = cycleGeometry.lowerFork.transform.localRotation;
 
-            fPhysicsWheelConfigJoint = fPhysicsWheel.GetComponent<ConfigurableJoint>();
-            rPhysicsWheelConfigJoint = rPhysicsWheel.GetComponent<ConfigurableJoint>();
+                fPhysicsWheelConfigJoint = fPhysicsWheel.GetComponent<ConfigurableJoint>();
+                rPhysicsWheelConfigJoint = rPhysicsWheel.GetComponent<ConfigurableJoint>();
+            }
 
             //Recording is set to 0 to remove the recording previous data if not set to playback
             if (wayPointSystem.recordingState == WayPointSystem.RecordingState.Record || wayPointSystem.recordingState == WayPointSystem.RecordingState.DoNothing)
@@ -184,198 +191,202 @@ namespace SBPScripts
         void FixedUpdate()
         {
 
-            //Physics based Steering Control.
-            fPhysicsWheel.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + customSteerAxis * steerAngle.Evaluate(rb.velocity.magnitude) + oscillationSteerEffect, 0);
-            fPhysicsWheelConfigJoint.axis = new Vector3(1, 0, 0);
-
-            //Power Control. Wheel Torque + Acceleration curves
-
-            //cache rb velocity
-            float currentSpeed = rb.velocity.magnitude;
-
-            if (!sprint)
-                currentTopSpeed = Mathf.Lerp(currentTopSpeed, topSpeed * relaxedSpeed, Time.deltaTime);
-            else
-                currentTopSpeed = Mathf.Lerp(currentTopSpeed, topSpeed, Time.deltaTime);
-
-            if (currentSpeed < currentTopSpeed && rawCustomAccelerationAxis > 0)
-                rWheelRb.AddTorque(transform.right * torque * customAccelerationAxis);
-
-            if (currentSpeed < currentTopSpeed && rawCustomAccelerationAxis > 0 && !isAirborne && !isBunnyHopping)
-                rb.AddForce(transform.forward * accelerationCurve.Evaluate(customAccelerationAxis));
-
-            if (currentSpeed < reversingSpeed && rawCustomAccelerationAxis < 0 && !isAirborne && !isBunnyHopping)
-                rb.AddForce(-transform.forward * accelerationCurve.Evaluate(customAccelerationAxis) * 0.5f);
-
-            if (transform.InverseTransformDirection(rb.velocity).z < 0)
-                isReversing = true;
-            else
-                isReversing = false;
-
-            if (rawCustomAccelerationAxis < 0 && isReversing == false && !isAirborne && !isBunnyHopping)
-                rb.AddForce(-transform.forward * accelerationCurve.Evaluate(customAccelerationAxis) * 2);
-
-            // Center of Mass handling
-            if (stuntMode)
-                rb.centerOfMass = GetComponent<BoxCollider>().center;
-            else
-                rb.centerOfMass = Vector3.zero + centerOfMassOffset;
-
-            //Handles
-            cycleGeometry.handles.transform.localRotation = Quaternion.Euler(0, customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, 0) * initialHandlesRotation;
-
-            //LowerFork
-            cycleGeometry.lowerFork.transform.localRotation = Quaternion.Euler(0, customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, customSteerAxis * -axisAngle) * initialLowerForkLocalRotaion;
-
-            //FWheelVisual
-            xQuat = Mathf.Sin(Mathf.Deg2Rad * (transform.rotation.eulerAngles.y));
-            zQuat = Mathf.Cos(Mathf.Deg2Rad * (transform.rotation.eulerAngles.y));
-            cycleGeometry.fWheelVisual.transform.rotation = Quaternion.Euler(xQuat * (customSteerAxis * -axisAngle), customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, zQuat * (customSteerAxis * -axisAngle));
-            cycleGeometry.fWheelVisual.transform.GetChild(0).transform.localRotation = cycleGeometry.RWheel.transform.rotation;
-
-            //Crank
-            crankCurrentQuat = cycleGeometry.RWheel.transform.rotation.eulerAngles.x;
-            if (customAccelerationAxis > 0 && !isAirborne && !isBunnyHopping)
+            if (_photonView.IsMine)
             {
-                crankSpeed += Mathf.Sqrt(customAccelerationAxis * Mathf.Abs(Mathf.DeltaAngle(crankCurrentQuat, crankLastQuat) * pedalAdjustments.pedalingSpeed));
-                crankSpeed %= 360;
-            }
-            else if (Mathf.Floor(crankSpeed) > restingCrank)
-                crankSpeed += -6;
-            else if (Mathf.Floor(crankSpeed) < restingCrank)
-                crankSpeed = Mathf.Lerp(crankSpeed, restingCrank, Time.deltaTime * 5);
+                //Physics based Steering Control.
+                fPhysicsWheel.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + customSteerAxis * steerAngle.Evaluate(rb.velocity.magnitude) + oscillationSteerEffect, 0);
+                fPhysicsWheelConfigJoint.axis = new Vector3(1, 0, 0);
 
-            crankLastQuat = crankCurrentQuat;
-            cycleGeometry.crank.transform.localRotation = Quaternion.Euler(crankSpeed, 0, 0);
+                //Power Control. Wheel Torque + Acceleration curves
 
-            //Pedals
-            cycleGeometry.lPedal.transform.localPosition = pedalAdjustments.lPedalOffset + new Vector3(0, Mathf.Cos(Mathf.Deg2Rad * (crankSpeed + 180)) * pedalAdjustments.crankRadius, Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 180)) * pedalAdjustments.crankRadius);
-            cycleGeometry.rPedal.transform.localPosition = pedalAdjustments.rPedalOffset + new Vector3(0, Mathf.Cos(Mathf.Deg2Rad * (crankSpeed)) * pedalAdjustments.crankRadius, Mathf.Sin(Mathf.Deg2Rad * (crankSpeed)) * pedalAdjustments.crankRadius);
+                //cache rb velocity
+                float currentSpeed = rb.velocity.magnitude;
 
-            //FGear
-            if (cycleGeometry.fGear != null)
-                cycleGeometry.fGear.transform.rotation = cycleGeometry.crank.transform.rotation;
-            //RGear
-            if (cycleGeometry.rGear != null)
-                cycleGeometry.rGear.transform.rotation = rPhysicsWheel.transform.rotation;
+                if (!sprint)
+                    currentTopSpeed = Mathf.Lerp(currentTopSpeed, topSpeed * relaxedSpeed, Time.deltaTime);
+                else
+                    currentTopSpeed = Mathf.Lerp(currentTopSpeed, topSpeed, Time.deltaTime);
 
-            //CycleOscillation
-            if ((sprint && currentSpeed > 5 && isReversing == false) || isAirborne || isBunnyHopping)
-                pickUpSpeed += Time.deltaTime * 2;
-            else
-                pickUpSpeed -= Time.deltaTime * 2;
+                if (currentSpeed < currentTopSpeed && rawCustomAccelerationAxis > 0)
+                    rWheelRb.AddTorque(transform.right * torque * customAccelerationAxis);
 
-            pickUpSpeed = Mathf.Clamp(pickUpSpeed, 0.1f, 1);
+                if (currentSpeed < currentTopSpeed && rawCustomAccelerationAxis > 0 && !isAirborne && !isBunnyHopping)
+                    rb.AddForce(transform.forward * accelerationCurve.Evaluate(customAccelerationAxis));
 
-            cycleOscillation = -Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 90)) * (oscillationAmount * (Mathf.Clamp(currentTopSpeed / currentSpeed, 1f, 1.5f))) * pickUpSpeed;
-            turnLeanAmount = -leanCurve.Evaluate(customLeanAxis) * Mathf.Clamp(currentSpeed * 0.1f, 0, 1);
-            oscillationSteerEffect = cycleOscillation * Mathf.Clamp01(customAccelerationAxis) * (oscillationAffectSteerRatio * (Mathf.Clamp(topSpeed / currentSpeed, 1f, 1.5f)));
+                if (currentSpeed < reversingSpeed && rawCustomAccelerationAxis < 0 && !isAirborne && !isBunnyHopping)
+                    rb.AddForce(-transform.forward * accelerationCurve.Evaluate(customAccelerationAxis) * 0.5f);
 
-            //FrictionSettings
-            wheelFrictionSettings.fPhysicMaterial.staticFriction = wheelFrictionSettings.fFriction.x;
-            wheelFrictionSettings.fPhysicMaterial.dynamicFriction = wheelFrictionSettings.fFriction.y;
-            wheelFrictionSettings.rPhysicMaterial.staticFriction = wheelFrictionSettings.rFriction.x;
-            wheelFrictionSettings.rPhysicMaterial.dynamicFriction = wheelFrictionSettings.rFriction.y;
+                if (transform.InverseTransformDirection(rb.velocity).z < 0)
+                    isReversing = true;
+                else
+                    isReversing = false;
 
-            if (Physics.Raycast(fPhysicsWheel.transform.position, Vector3.down, out hit, Mathf.Infinity))
-                if (hit.distance < 0.5f)
+                if (rawCustomAccelerationAxis < 0 && isReversing == false && !isAirborne && !isBunnyHopping)
+                    rb.AddForce(-transform.forward * accelerationCurve.Evaluate(customAccelerationAxis) * 2);
+
+                // Center of Mass handling
+                if (stuntMode)
+                    rb.centerOfMass = GetComponent<BoxCollider>().center;
+                else
+                    rb.centerOfMass = Vector3.zero + centerOfMassOffset;
+
+                //Handles
+                cycleGeometry.handles.transform.localRotation = Quaternion.Euler(0, customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, 0) * initialHandlesRotation;
+
+                //LowerFork
+                cycleGeometry.lowerFork.transform.localRotation = Quaternion.Euler(0, customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, customSteerAxis * -axisAngle) * initialLowerForkLocalRotaion;
+
+                //FWheelVisual
+                xQuat = Mathf.Sin(Mathf.Deg2Rad * (transform.rotation.eulerAngles.y));
+                zQuat = Mathf.Cos(Mathf.Deg2Rad * (transform.rotation.eulerAngles.y));
+                cycleGeometry.fWheelVisual.transform.rotation = Quaternion.Euler(xQuat * (customSteerAxis * -axisAngle), customSteerAxis * steerAngle.Evaluate(currentSpeed) + oscillationSteerEffect * 5, zQuat * (customSteerAxis * -axisAngle));
+                cycleGeometry.fWheelVisual.transform.GetChild(0).transform.localRotation = cycleGeometry.RWheel.transform.rotation;
+
+                //Crank
+                crankCurrentQuat = cycleGeometry.RWheel.transform.rotation.eulerAngles.x;
+                if (customAccelerationAxis > 0 && !isAirborne && !isBunnyHopping)
                 {
-                    Vector3 velf = fPhysicsWheel.transform.InverseTransformDirection(fWheelRb.velocity);
-                    velf.x *= Mathf.Clamp01(1 / (wheelFrictionSettings.fFriction.x + wheelFrictionSettings.fFriction.y));
-                    fWheelRb.velocity = fPhysicsWheel.transform.TransformDirection(velf);
+                    crankSpeed += Mathf.Sqrt(customAccelerationAxis * Mathf.Abs(Mathf.DeltaAngle(crankCurrentQuat, crankLastQuat) * pedalAdjustments.pedalingSpeed));
+                    crankSpeed %= 360;
                 }
-            if (Physics.Raycast(rPhysicsWheel.transform.position, Vector3.down, out hit, Mathf.Infinity))
-                if (hit.distance < 0.5f)
+                else if (Mathf.Floor(crankSpeed) > restingCrank)
+                    crankSpeed += -6;
+                else if (Mathf.Floor(crankSpeed) < restingCrank)
+                    crankSpeed = Mathf.Lerp(crankSpeed, restingCrank, Time.deltaTime * 5);
+
+                crankLastQuat = crankCurrentQuat;
+                cycleGeometry.crank.transform.localRotation = Quaternion.Euler(crankSpeed, 0, 0);
+
+                //Pedals
+                cycleGeometry.lPedal.transform.localPosition = pedalAdjustments.lPedalOffset + new Vector3(0, Mathf.Cos(Mathf.Deg2Rad * (crankSpeed + 180)) * pedalAdjustments.crankRadius, Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 180)) * pedalAdjustments.crankRadius);
+                cycleGeometry.rPedal.transform.localPosition = pedalAdjustments.rPedalOffset + new Vector3(0, Mathf.Cos(Mathf.Deg2Rad * (crankSpeed)) * pedalAdjustments.crankRadius, Mathf.Sin(Mathf.Deg2Rad * (crankSpeed)) * pedalAdjustments.crankRadius);
+
+                //FGear
+                if (cycleGeometry.fGear != null)
+                    cycleGeometry.fGear.transform.rotation = cycleGeometry.crank.transform.rotation;
+                //RGear
+                if (cycleGeometry.rGear != null)
+                    cycleGeometry.rGear.transform.rotation = rPhysicsWheel.transform.rotation;
+
+                //CycleOscillation
+                if ((sprint && currentSpeed > 5 && isReversing == false) || isAirborne || isBunnyHopping)
+                    pickUpSpeed += Time.deltaTime * 2;
+                else
+                    pickUpSpeed -= Time.deltaTime * 2;
+
+                pickUpSpeed = Mathf.Clamp(pickUpSpeed, 0.1f, 1);
+
+                cycleOscillation = -Mathf.Sin(Mathf.Deg2Rad * (crankSpeed + 90)) * (oscillationAmount * (Mathf.Clamp(currentTopSpeed / currentSpeed, 1f, 1.5f))) * pickUpSpeed;
+                turnLeanAmount = -leanCurve.Evaluate(customLeanAxis) * Mathf.Clamp(currentSpeed * 0.1f, 0, 1);
+                oscillationSteerEffect = cycleOscillation * Mathf.Clamp01(customAccelerationAxis) * (oscillationAffectSteerRatio * (Mathf.Clamp(topSpeed / currentSpeed, 1f, 1.5f)));
+
+                //FrictionSettings
+                wheelFrictionSettings.fPhysicMaterial.staticFriction = wheelFrictionSettings.fFriction.x;
+                wheelFrictionSettings.fPhysicMaterial.dynamicFriction = wheelFrictionSettings.fFriction.y;
+                wheelFrictionSettings.rPhysicMaterial.staticFriction = wheelFrictionSettings.rFriction.x;
+                wheelFrictionSettings.rPhysicMaterial.dynamicFriction = wheelFrictionSettings.rFriction.y;
+
+                if (Physics.Raycast(fPhysicsWheel.transform.position, Vector3.down, out hit, Mathf.Infinity))
+                    if (hit.distance < 0.5f)
+                    {
+                        Vector3 velf = fPhysicsWheel.transform.InverseTransformDirection(fWheelRb.velocity);
+                        velf.x *= Mathf.Clamp01(1 / (wheelFrictionSettings.fFriction.x + wheelFrictionSettings.fFriction.y));
+                        fWheelRb.velocity = fPhysicsWheel.transform.TransformDirection(velf);
+                    }
+                if (Physics.Raycast(rPhysicsWheel.transform.position, Vector3.down, out hit, Mathf.Infinity))
+                    if (hit.distance < 0.5f)
+                    {
+                        Vector3 velr = rPhysicsWheel.transform.InverseTransformDirection(rWheelRb.velocity);
+                        velr.x *= Mathf.Clamp01(1 / (wheelFrictionSettings.rFriction.x + wheelFrictionSettings.rFriction.y));
+                        rWheelRb.velocity = rPhysicsWheel.transform.TransformDirection(velr);
+                    }
+
+                //Impact sensing
+                deceleration = (fWheelRb.velocity - lastVelocity) / Time.fixedDeltaTime;
+                lastVelocity = fWheelRb.velocity;
+                impactFrames--;
+                impactFrames = Mathf.Clamp(impactFrames, 0, 15);
+                if (deceleration.y > 200 && lastDeceleration.y < -1)
+                    impactFrames = 30;
+
+                lastDeceleration = deceleration;
+
+                if (impactFrames > 0 && inelasticCollision)
                 {
-                    Vector3 velr = rPhysicsWheel.transform.InverseTransformDirection(rWheelRb.velocity);
-                    velr.x *= Mathf.Clamp01(1 / (wheelFrictionSettings.rFriction.x + wheelFrictionSettings.rFriction.y));
-                    rWheelRb.velocity = rPhysicsWheel.transform.TransformDirection(velr);
+                    fWheelRb.velocity = new Vector3(fWheelRb.velocity.x, -Mathf.Abs(fWheelRb.velocity.y), fWheelRb.velocity.z);
+                    rWheelRb.velocity = new Vector3(rWheelRb.velocity.x, -Mathf.Abs(rWheelRb.velocity.y), rWheelRb.velocity.z);
                 }
 
-            //Impact sensing
-            deceleration = (fWheelRb.velocity - lastVelocity) / Time.fixedDeltaTime;
-            lastVelocity = fWheelRb.velocity;
-            impactFrames--;
-            impactFrames = Mathf.Clamp(impactFrames, 0, 15);
-            if (deceleration.y > 200 && lastDeceleration.y < -1)
-                impactFrames = 30;
-
-            lastDeceleration = deceleration;
-
-            if (impactFrames > 0 && inelasticCollision)
-            {
-                fWheelRb.velocity = new Vector3(fWheelRb.velocity.x, -Mathf.Abs(fWheelRb.velocity.y), fWheelRb.velocity.z);
-                rWheelRb.velocity = new Vector3(rWheelRb.velocity.x, -Mathf.Abs(rWheelRb.velocity.y), rWheelRb.velocity.z);
-            }
-
-            //AirControl
-            if (Physics.Raycast(transform.position + new Vector3(0, 1f, 0), Vector3.down, out hit, Mathf.Infinity))
-            {
-                if (hit.distance > 1.5f || impactFrames > 0)
+                //AirControl
+                if (Physics.Raycast(transform.position + new Vector3(0, 1f, 0), Vector3.down, out hit, Mathf.Infinity))
                 {
-                    isAirborne = true;
-                    restingCrank = 100;
+                    if (hit.distance > 1.5f || impactFrames > 0)
+                    {
+                        isAirborne = true;
+                        restingCrank = 100;
+                    }
+                    else if (isBunnyHopping)
+                    {
+                        restingCrank = 100;
+                    }
+                    else
+                    {
+                        isAirborne = false;
+                        restingCrank = 10;
+                    }
+                    // For stunts
+                    // 5f is the snap to ground distance
+                    if (hit.distance > airTimeSettings.heightThreshold && airTimeSettings.freestyle)
+                    {
+                        stuntMode = true;
+                        // Stunt + flips controls (Not available for Waypoint system as of yet)
+                        // You may use Numpad Inputs as well.
+                        rb.AddTorque(Vector3.up * customSteerAxis * 4 * airTimeSettings.airTimeRotationSensitivity, ForceMode.Impulse);
+                        rb.AddTorque(transform.right * rawCustomAccelerationAxis * -3 * airTimeSettings.airTimeRotationSensitivity, ForceMode.Impulse);
+                    }
+                    else
+                        stuntMode = false;
                 }
-                else if (isBunnyHopping)
+
+                // Setting the Main Rotational movements of the bicycle
+                if (airTimeSettings.freestyle)
                 {
-                    restingCrank = 100;
+                    if (!stuntMode && isAirborne)
+                        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity)), Time.deltaTime * airTimeSettings.groundSnapSensitivity);
+                    else if (!stuntMode && !isAirborne)
+                        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity)), Time.deltaTime * 10 * airTimeSettings.groundSnapSensitivity);
                 }
                 else
                 {
-                    isAirborne = false;
-                    restingCrank = 10;
+                    //Pre-version 1.5
+                    transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity));
                 }
-                // For stunts
-                // 5f is the snap to ground distance
-                if (hit.distance > airTimeSettings.heightThreshold && airTimeSettings.freestyle)
-                {
-                    stuntMode = true;
-                    // Stunt + flips controls (Not available for Waypoint system as of yet)
-                    // You may use Numpad Inputs as well.
-                    rb.AddTorque(Vector3.up * customSteerAxis * 4 * airTimeSettings.airTimeRotationSensitivity, ForceMode.Impulse);
-                    rb.AddTorque(transform.right * rawCustomAccelerationAxis * -3 * airTimeSettings.airTimeRotationSensitivity, ForceMode.Impulse);
-                }
-                else
-                    stuntMode = false;
             }
-
-            // Setting the Main Rotational movements of the bicycle
-            if (airTimeSettings.freestyle)
-            {
-                if (!stuntMode && isAirborne)
-                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity)), Time.deltaTime * airTimeSettings.groundSnapSensitivity);
-                else if (!stuntMode && !isAirborne)
-                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity)), Time.deltaTime * 10 * airTimeSettings.groundSnapSensitivity);
-            }
-            else
-            {
-                //Pre-version 1.5
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, turnLeanAmount + cycleOscillation + GroundConformity(groundConformity));
-            }
-
 
         }
         void Update()
         {
-            ApplyCustomInput();
-
-            //GetKeyUp/Down requires an Update Cycle
-            //BunnyHopping
-            if (bunnyHopInputState == 1)
+            if (_photonView.IsMine)
             {
-                isBunnyHopping = true;
-                bunnyHopAmount += Time.deltaTime * 8f;
+                ApplyCustomInput();
+
+                //GetKeyUp/Down requires an Update Cycle
+                //BunnyHopping
+                if (bunnyHopInputState == 1)
+                {
+                    isBunnyHopping = true;
+                    bunnyHopAmount += Time.deltaTime * 8f;
+                }
+                if (bunnyHopInputState == -1)
+                    StartCoroutine(DelayBunnyHop());
+
+                if (bunnyHopInputState == -1 && !isAirborne)
+                    rb.AddForce(transform.up * bunnyHopAmount * bunnyHopStrength, ForceMode.VelocityChange);
+                else
+                    bunnyHopAmount = Mathf.Lerp(bunnyHopAmount, 0, Time.deltaTime * 8f);
+
+                bunnyHopAmount = Mathf.Clamp01(bunnyHopAmount);
             }
-            if (bunnyHopInputState == -1)
-                StartCoroutine(DelayBunnyHop());
-
-            if (bunnyHopInputState == -1 && !isAirborne)
-                rb.AddForce(transform.up * bunnyHopAmount * bunnyHopStrength, ForceMode.VelocityChange);
-            else
-                bunnyHopAmount = Mathf.Lerp(bunnyHopAmount, 0, Time.deltaTime * 8f);
-
-            bunnyHopAmount = Mathf.Clamp01(bunnyHopAmount);
-
         }
         float GroundConformity(bool toggle)
         {
