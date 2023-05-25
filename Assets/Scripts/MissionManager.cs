@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static MissionManager instance;
+
+    public List<GameObject> houseList;
+
+    public GameObject actualHouse;
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CommandStart(ShopType shopType)
     {
-        
+        if (houseList.Count > 0)
+        actualHouse = houseList[0].transform.gameObject;
+        actualHouse.SetActive(true);
+    }
+
+    public void CommandStop()
+    {
+        actualHouse.SetActive(false);
+        actualHouse = null;
     }
 }
