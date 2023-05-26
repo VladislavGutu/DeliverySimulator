@@ -42,7 +42,8 @@ namespace SBPScripts
                     }
                     else
                     {
-                        bicycleCamera.target = cyclist.transform.root.transform;
+                        bicycleCamera.target = cyclist.transform;
+                        // bicycleCamera.target = cyclist.transform.root.transform;
                     }
                 }
 

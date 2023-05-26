@@ -526,6 +526,20 @@ namespace SBPScripts
         }
 
     }
+    
+    // public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    // {
+    //     if (stream.IsWriting)
+    //     {
+    //         stream.SendNext(transform.position);
+    //         stream.SendNext(Health);
+    //     }
+    //     else if (stream.IsReading)
+    //     {
+    //         smoothMove = (Vector3)stream.ReceiveNext();
+    //         Health = (float)stream.ReceiveNext();
+    //     }
+    // }
 }
 
 //***MOBILE CONTROLS****//
