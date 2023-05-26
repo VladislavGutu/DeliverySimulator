@@ -4093,6 +4093,7 @@ GameObject:
   - component: {fileID: 4608769193915686303}
   - component: {fileID: 514331227846776592}
   - component: {fileID: 1571490749203937173}
+  - component: {fileID: 1909267867980799442}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -4384,7 +4385,7 @@ MonoBehaviour:
   _staminaCurrentAmount: 0
   _staminaMaxAmount: 10
   canSprint: 1
-  _photonView: {fileID: 0}
+  _photonView: {fileID: 514331227846776592}
 --- !u!114 &4608769193915686301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4458,6 +4459,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 1571490749203937173}
   - {fileID: 2298747402227843671}
+  - {fileID: 1169563076629370544}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -4494,6 +4496,22 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &1909267867980799442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608769193915686297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5e7c246ba594b91ac708923be0cc45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PhotonView: {fileID: 514331227846776592}
+  _BicycleController: {fileID: 4608769193915686296}
+  _ExternalCharacter: {fileID: 3649889339608651471}
+  _PerfectMouseLook: {fileID: 7724731408321318378}
 --- !u!1 &4642563813565434964
 GameObject:
   m_ObjectHideFlags: 0

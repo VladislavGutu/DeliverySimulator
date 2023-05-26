@@ -19,17 +19,21 @@ namespace SBPScripts
         {
             _photonView = GetComponent<PhotonView>();
 
-            if (_photonView.IsMine)
+            AllNeededReferences[] tempANR = FindObjectsOfType<AllNeededReferences>();
+
+            for (int i = 0; i < tempANR.Length; i++)
             {
-                bicycleCamera = GetComponent<BicycleCamera>();
-                bicycleStatus = GetComponent<BicycleStatus>();
+                if (tempANR[i]._PhotonView.IsMine)
+                {
+                    cyclist = tempANR[i]._BicycleController.gameObject;
+                    externalCharacter = tempANR[i]._ExternalCharacter;
+                    _FPSCameraControll = tempANR[i]._PerfectMouseLook;
+                    _photonView = tempANR[i]._PhotonView;
+                }
             }
-                
         }
         void LateUpdate()
         {
-            if (_photonView.IsMine)
-            {
                 if (externalCharacter != null)
                 {
                     if (externalCharacter.activeInHierarchy)
@@ -55,7 +59,6 @@ namespace SBPScripts
                     _TPSCameraControll.enabled = false;
                     _FPSCameraControll.enabled = true;
                 }
-            }
         }
     }
 }

@@ -40,7 +40,18 @@ namespace SBPScripts
         void Start()
         {
             perfectMouseLook = GetComponent<PerfectMouseLook>();
-            _photonView = GetComponent<PhotonView>();
+            
+            AllNeededReferences[] tempANR = FindObjectsOfType<AllNeededReferences>();
+                        
+                        for (int i = 0; i < tempANR.Length; i++)
+                        {
+                            if (tempANR[i]._PhotonView.IsMine)
+                            {
+                                target = tempANR[i]._BicycleController.gameObject.transform;
+                                _photonView = tempANR[i]._PhotonView;
+                            }
+                        }
+                        Debug.LogError(tempANR.Length);
             if (stuntCamera)
             {
                 var follow = new GameObject("Follow");
@@ -54,13 +65,12 @@ namespace SBPScripts
             }
             else
             {
-                if(_photonView.IsMine)
-                    target = GameObject.FindObjectOfType<BicycleController>().transform;
             }
         }
 
         void LateUpdate()
         {
+            Debug.LogError(_photonView);
             if (_photonView.IsMine)
             {
                 if (target != null)
