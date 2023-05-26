@@ -529,13 +529,11 @@ namespace SBPScripts
         {
             if (stream.IsWriting)
             {
-                stream.SendNext(transform.position);
-                stream.SendNext(transform.rotation);
+                stream.SendNext(currentTopSpeed);
             }
             else if (stream.IsReading)
             {
-                transform.position = (Vector3)stream.ReceiveNext();
-                transform.rotation = (Quaternion)stream.ReceiveNext();
+                currentTopSpeed = (float)stream.ReceiveNext();
             }
         }
     }

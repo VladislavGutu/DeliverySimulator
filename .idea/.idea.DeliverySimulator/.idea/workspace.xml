@@ -269,7 +269,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Desktop/TestMultiplayer\BMX.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/delivery/delivery.app/Contents/MacOS/BMX" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\Desktop\TestMultiplayer" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -335,7 +335,7 @@
       <workItem from="1684952230068" duration="64000" />
       <workItem from="1684952312191" duration="1716000" />
       <workItem from="1684954285251" duration="6650000" />
-      <workItem from="1684999836992" duration="7936000" />
+      <workItem from="1684999836992" duration="9894000" />
     </task>
     <servers />
   </component>
