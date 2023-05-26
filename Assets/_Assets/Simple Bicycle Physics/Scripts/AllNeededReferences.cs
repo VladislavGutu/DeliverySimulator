@@ -9,6 +9,7 @@ public class AllNeededReferences : MonoBehaviour
 {
     public PhotonView _PhotonView;
     public BicycleController _BicycleController;
+    public BicycleStatus _BicycleStatus;
     public GameObject _ExternalCharacter;
     public PerfectMouseLook _PerfectMouseLook;
 

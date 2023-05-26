@@ -9,8 +9,8 @@ namespace SBPScripts
     {
         public GameObject cyclist;
         public GameObject externalCharacter;
-        BicycleCamera bicycleCamera;
-        BicycleStatus bicycleStatus;
+        public BicycleCamera bicycleCamera;
+        public BicycleStatus bicycleStatus;
         public PerfectMouseLook _TPSCameraControll;
         public PerfectMouseLook _FPSCameraControll;
 
@@ -21,11 +21,15 @@ namespace SBPScripts
 
             AllNeededReferences[] tempANR = FindObjectsOfType<AllNeededReferences>();
 
+            bicycleCamera = GetComponent<BicycleCamera>();
+            
             for (int i = 0; i < tempANR.Length; i++)
             {
                 if (tempANR[i]._PhotonView.IsMine)
                 {
                     cyclist = tempANR[i]._BicycleController.gameObject;
+                    bicycleStatus = tempANR[i]._BicycleStatus;
+
                     externalCharacter = tempANR[i]._ExternalCharacter;
                     _FPSCameraControll = tempANR[i]._PerfectMouseLook;
                     _photonView = tempANR[i]._PhotonView;
@@ -42,8 +46,7 @@ namespace SBPScripts
                     }
                     else
                     {
-                        bicycleCamera.target = cyclist.transform;
-                        // bicycleCamera.target = cyclist.transform.root.transform;
+                        bicycleCamera.target = cyclist.transform.root.transform;
                     }
                 }
 
