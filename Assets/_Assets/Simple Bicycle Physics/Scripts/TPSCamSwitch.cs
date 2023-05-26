@@ -13,36 +13,48 @@ namespace SBPScripts
         BicycleStatus bicycleStatus;
         public PerfectMouseLook _TPSCameraControll;
         public PerfectMouseLook _FPSCameraControll;
+
+        private PhotonView _photonView;
         void Start()
         {
-            bicycleCamera = GetComponent<BicycleCamera>();
-            bicycleStatus = GetComponent<BicycleStatus>();
+            _photonView = GetComponent<PhotonView>();
+
+            if (_photonView.IsMine)
+            {
+                bicycleCamera = GetComponent<BicycleCamera>();
+                bicycleStatus = GetComponent<BicycleStatus>();
+            }
+                
         }
         void LateUpdate()
         {
-            if (externalCharacter != null)
+            if (_photonView.IsMine)
             {
-                if (externalCharacter.activeInHierarchy)
+                if (externalCharacter != null)
                 {
-                    bicycleCamera.target = externalCharacter.transform;
+                    if (externalCharacter.activeInHierarchy)
+                    {
+                        bicycleCamera.target = externalCharacter.transform;
+                    }
+                    else
+                    {
+                        bicycleCamera.target = cyclist.transform.root.transform;
+                    }
                 }
-                else
+
+                if (bicycleStatus.dislodged && bicycleStatus.instantiatedRagdoll != null)
+                {
+                    bicycleCamera.target = bicycleStatus.instantiatedRagdoll.transform.Find("mixamorig:Hips").gameObject
+                        .transform;
+                    _TPSCameraControll.enabled = true;
+                    _FPSCameraControll.enabled = false;
+                }
+                else if (externalCharacter == null)
                 {
                     bicycleCamera.target = cyclist.transform.root.transform;
+                    _TPSCameraControll.enabled = false;
+                    _FPSCameraControll.enabled = true;
                 }
-            }
-            
-            if (bicycleStatus.dislodged && bicycleStatus.instantiatedRagdoll!=null)
-            {
-                bicycleCamera.target = bicycleStatus.instantiatedRagdoll.transform.Find("mixamorig:Hips").gameObject.transform;
-                _TPSCameraControll.enabled = true;
-                _FPSCameraControll.enabled = false;
-            }
-            else if(externalCharacter==null)
-            {
-                bicycleCamera.target = cyclist.transform.root.transform;
-                _TPSCameraControll.enabled = false;
-                _FPSCameraControll.enabled = true;
             }
         }
     }
