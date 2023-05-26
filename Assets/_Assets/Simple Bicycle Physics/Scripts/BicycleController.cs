@@ -56,7 +56,7 @@ namespace SBPScripts
         public float heightThreshold;
         public float groundSnapSensitivity;
     }
-    public class BicycleController : MonoBehaviour
+    public class BicycleController : MonoBehaviour, IPunObservable
     {
         public CycleGeometry cycleGeometry;
         public GameObject fPhysicsWheel, rPhysicsWheel;
@@ -525,21 +525,20 @@ namespace SBPScripts
             yield return null;
         }
 
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            if (stream.IsWriting)
+            {
+                stream.SendNext(transform.position);
+                stream.SendNext(transform.rotation);
+            }
+            else if (stream.IsReading)
+            {
+                transform.position = (Vector3)stream.ReceiveNext();
+                transform.rotation = (Quaternion)stream.ReceiveNext();
+            }
+        }
     }
-    
-    // public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    // {
-    //     if (stream.IsWriting)
-    //     {
-    //         stream.SendNext(transform.position);
-    //         stream.SendNext(Health);
-    //     }
-    //     else if (stream.IsReading)
-    //     {
-    //         smoothMove = (Vector3)stream.ReceiveNext();
-    //         Health = (float)stream.ReceiveNext();
-    //     }
-    // }
 }
 
 //***MOBILE CONTROLS****//
