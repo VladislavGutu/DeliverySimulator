@@ -24,16 +24,20 @@ public class ShopMission : MonoBehaviour
         switch (shopType)
         {
             case ShopType.Pizza:
-                _hudNavigationElement.CompassBar.Icon.sprite = _shopSprite[0];
+                _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[0];
+                _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[0];
                 break;
             case ShopType.MC:
-                _hudNavigationElement.CompassBar.Icon.sprite = _shopSprite[1];
+                _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[1];
+                _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[1];
                 break;
             case ShopType.KFC:
-                _hudNavigationElement.CompassBar.Icon.sprite = _shopSprite[2];
+                _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[2];
+                _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[2];
                 break;
             case ShopType.Sushi:
-                _hudNavigationElement.CompassBar.Icon.sprite = _shopSprite[3];
+                _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[3];
+                _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[3];
                 break;
         }
     }

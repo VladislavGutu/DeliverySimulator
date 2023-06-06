@@ -103,7 +103,8 @@ MonoBehaviour:
     RadarPrefab: {fileID: 0}
     CompassBarPrefab: {fileID: 114875581833013858, guid: a7ab21cce64034cb9ab1d06209f59e6e,
       type: 3}
-    IndicatorPrefab: {fileID: 0}
+    IndicatorPrefab: {fileID: 114724236924444632, guid: daf87816f95e4da4f800d69e69544626,
+      type: 3}
     MinimapPrefab: {fileID: 0}
   hideInRadar: 0
   ignoreRadarRadius: 0
