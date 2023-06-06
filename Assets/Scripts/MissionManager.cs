@@ -18,7 +18,8 @@ public class MissionManager : MonoBehaviour
     public void CommandStart(ShopType shopType)
     {
         if (houseList.Count > 0)
-        actualHouse = houseList[0].transform.gameObject;
+            actualHouse = houseList[Random.Range(0, houseList.Count)].transform.gameObject;
+        
         actualHouse.SetActive(true);
     }
 

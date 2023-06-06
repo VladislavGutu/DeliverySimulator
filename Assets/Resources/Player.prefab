@@ -2702,7 +2702,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.026207283, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.6599373, z: 0.033017658}
+  m_ConnectedAnchor: {x: -0.0000024109058, y: 0.659937, z: 0.033014186}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -3084,6 +3084,7 @@ GameObject:
   - component: {fileID: 3649889339608651470}
   - component: {fileID: 3649889339608651472}
   - component: {fileID: 1169563076629370544}
+  - component: {fileID: 4317346639882428841}
   m_Layer: 8
   m_Name: PlayerArmature (1)
   m_TagString: Player
@@ -3250,13 +3251,13 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Speed
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Jump
   - Type: 4
     SynchronizeType: 2
     Name: Grounded
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: FreeFall
   - Type: 1
     SynchronizeType: 2
@@ -3264,6 +3265,22 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
+--- !u!114 &4317346639882428841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3649889339608651471}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3723126110091136028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4093,7 +4110,7 @@ GameObject:
   - component: {fileID: 4608769193915686303}
   - component: {fileID: 514331227846776592}
   - component: {fileID: 1909267867980799442}
-  - component: {fileID: 678400841456119548}
+  - component: {fileID: 2939694947695634431}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -4457,10 +4474,10 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 4608769193915686296}
-  - {fileID: 678400841456119548}
+  - {fileID: 2939694947695634431}
   - {fileID: 2298747402227843671}
   - {fileID: 1169563076629370544}
+  - {fileID: 4317346639882428841}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -4481,7 +4498,7 @@ MonoBehaviour:
   _BicycleStatus: {fileID: 4608769193915686300}
   _ExternalCharacter: {fileID: 3649889339608651471}
   _PerfectMouseLook: {fileID: 7724731408321318378}
---- !u!114 &678400841456119548
+--- !u!114 &2939694947695634431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4490,30 +4507,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4608769193915686297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 2
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0.1
-    ExtrapolateOption: 1
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-  m_RotationModel:
-    SynchronizeEnabled: 1
-    InterpolateOption: 1
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
-  m_ScaleModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &4642563813565434964
 GameObject:
   m_ObjectHideFlags: 0
@@ -8030,7 +8030,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.2831618, z: 0}
   m_Axis: {x: 0, y: 0.55, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.006215373, y: 0.8591162, z: 0.8512411}
+  m_ConnectedAnchor: {x: -0.0062226006, y: 0.85911435, z: 0.85122156}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -8500,7 +8500,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.006215373, y: -0.14084738, z: 0.122758865}
+  m_ConnectedAnchor: {x: 0.0061942874, y: -0.14084563, z: 0.12277979}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 0, z: 0}
   m_XMotion: 0
@@ -9676,7 +9676,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.20473975, z: -0.56566066}
+  m_ConnectedAnchor: {x: 0.000009044908, y: -0.20473891, z: -0.56564957}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 0, z: 0}
   m_XMotion: 0

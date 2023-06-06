@@ -23,18 +23,23 @@ namespace SBPScripts
 
             bicycleCamera = GetComponent<BicycleCamera>();
             
-            for (int i = 0; i < tempANR.Length; i++)
-            {
-                if (tempANR[i]._PhotonView.IsMine)
-                {
-                    cyclist = tempANR[i]._BicycleController.gameObject;
-                    bicycleStatus = tempANR[i]._BicycleStatus;
+            // for (int i = 0; i < tempANR.Length; i++)
+            // {
+            //     if (tempANR[i]._PhotonView.IsMine)
+            //     {
+            //         cyclist = tempANR[i]._BicycleController.gameObject;
+            //         bicycleStatus = tempANR[i]._BicycleStatus;
+            //
+            //         externalCharacter = tempANR[i]._ExternalCharacter;
+            //         _FPSCameraControll = tempANR[i]._PerfectMouseLook;
+            //         _photonView = tempANR[i]._PhotonView;
+            //     }
+            // }
+            
+            cyclist = FindObjectOfType<BicycleController>().gameObject;
 
-                    externalCharacter = tempANR[i]._ExternalCharacter;
-                    _FPSCameraControll = tempANR[i]._PerfectMouseLook;
-                    _photonView = tempANR[i]._PhotonView;
-                }
-            }
+            bicycleStatus = cyclist.GetComponent<BicycleStatus>();
+            _FPSCameraControll = GetComponent<PerfectMouseLook>();
         }
         void LateUpdate()
         {

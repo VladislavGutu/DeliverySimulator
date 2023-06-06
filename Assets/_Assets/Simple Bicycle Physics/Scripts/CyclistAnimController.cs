@@ -42,8 +42,8 @@ namespace SBPScripts
 
         void Update()
         {
-            if (bicycleController._photonView.IsMine)
-            {
+            // if (bicycleController._photonView.IsMine)
+            // {
                 if (cyclist != null && externalCharacter != null)
                 {
                     if (Input.GetKeyDown(KeyCode.Return) && bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z <= 0.1f && waitTime == 0)
@@ -121,7 +121,7 @@ namespace SBPScripts
                         clipInfoLast = clipInfoCurrent;
                     }
                 }
-            }
+            // }
         }
 
         IEnumerator LeftFootIK(int offset)

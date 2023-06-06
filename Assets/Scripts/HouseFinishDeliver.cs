@@ -12,8 +12,6 @@ public class HouseFinishDeliver : MonoBehaviour
         {
             Debug.LogError($"<color=green> House Triger Activate </color>");
             MissionManager.instance.CommandStop();
-
         }
-
     }
 }

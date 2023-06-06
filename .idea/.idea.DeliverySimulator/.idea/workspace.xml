@@ -3,43 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/Files/OutlinedSquaredBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/Files/OutlinedSquaredBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/Files/PunIcon-White-129.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonChat/Demos/DemoChat/Files/PunIcon-White-129.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/CopyIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/CopyIcon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/CopyIconPro.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/CopyIconPro.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/PunGradient.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/PunGradient.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/help.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Editor/help.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/PunIcon-White-129.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/PunIcon-White-129.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/toHub.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Sprites/toHub.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/toHub.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/toHub.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Textures/tankco.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Textures/tankco.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/roadStraight.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/roadStraight.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Models/Pointer.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Models/Pointer.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxBright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxBright.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxOrange.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxOrange.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxOrangeRed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxOrangeRed.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxText.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxText.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxTextHover.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/BoxTextHover.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown Arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown Arrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown CheckMark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/DropDown CheckMark.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/RoundedBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/RoundedBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Toggle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/Toggle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleHover.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOn.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOnHover.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Skin/ToggleOnHover.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitCircleTexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitCircleTexture.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTexture.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureRed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Textures/UnitTextureRed.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp128.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp32.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Icons/PunIconApp48.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Important Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Important Materials/Glass.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pos-terminal/source/Новая папка/Material #2100454184.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pos-terminal/source/Новая папка/Material #2100454184.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pos-terminal/source/Новая папка/Material #2100454185.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pos-terminal/source/Новая папка/Material #2100454185.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Shop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Materials/WindowsCover.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Materials/WindowsCover.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Materials/window.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Materials/window.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Shaders/Darken 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/CScape/CScapeToolset/Shaders/Darken 1.mat" afterDir="false" />
@@ -191,6 +165,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Prototyping/Wall 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Prototyping/Wall 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Prototyping/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Prototyping/Wall.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/TPSCamSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/TPSCamSwitch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Arms.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Arms.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Body.mat" afterDir="false" />
@@ -215,7 +191,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/RoadMarkings.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/RoadMarkings.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/Terrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/Terrain.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/DemoContent/City/Materials/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Integration/StylizedVehiclePack.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightGreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightGreen.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightRed.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightYellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/LightYellow.mat" afterDir="false" />
@@ -225,6 +200,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/Waypoint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Materials/Waypoint.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
@@ -240,6 +217,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/SpawnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/AllNeededReferences.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/vladislavgutu/Documents/GitHub/DeliverySimulator/Assets/_Assets/Simple Bicycle Physics/Scripts/TPSCamSwitch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/UnityVectorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -251,22 +229,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/Users/vladislavgutu/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/vladislavgutu/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/delivery/delivery.app/Contents/MacOS/BMX" />
@@ -336,6 +314,7 @@
       <workItem from="1684952312191" duration="1716000" />
       <workItem from="1684954285251" duration="6650000" />
       <workItem from="1684999836992" duration="9894000" />
+      <workItem from="1686041889964" duration="6184000" />
     </task>
     <servers />
   </component>

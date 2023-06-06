@@ -41,17 +41,19 @@ namespace SBPScripts
         {
             perfectMouseLook = GetComponent<PerfectMouseLook>();
             
-            AllNeededReferences[] tempANR = FindObjectsOfType<AllNeededReferences>();
-                        
-                        for (int i = 0; i < tempANR.Length; i++)
-                        {
-                            if (tempANR[i]._PhotonView.IsMine)
-                            {
-                                target = tempANR[i]._BicycleController.gameObject.transform;
-                                _photonView = tempANR[i]._PhotonView;
-                            }
-                        }
-                        Debug.LogError(tempANR.Length);
+            // AllNeededReferences[] tempANR = FindObjectsOfType<AllNeededReferences>();
+            //             
+            //             for (int i = 0; i < tempANR.Length; i++)
+            //             {
+            //                 if (tempANR[i]._PhotonView.IsMine)
+            //                 {
+            //                     target = tempANR[i]._BicycleController.gameObject.transform;
+            //                     _photonView = tempANR[i]._PhotonView;
+            //                 }
+            //             }
+            //             Debug.LogError(tempANR.Length);
+            
+            target = GameObject.FindObjectOfType<BicycleController>().transform;
             if (stuntCamera)
             {
                 var follow = new GameObject("Follow");
@@ -70,9 +72,8 @@ namespace SBPScripts
 
         void LateUpdate()
         {
-            Debug.LogError(_photonView);
-            if (_photonView.IsMine)
-            {
+            // if (_photonView.IsMine)
+            // {
                 if (target != null)
                 {
                     wantedHeight = target.position.y + height;
@@ -97,7 +98,7 @@ namespace SBPScripts
 
                     lookAtVector = new Vector3(0, lookAtHeight, 0);
                 }
-            }
+            // }
         }
     }
 }

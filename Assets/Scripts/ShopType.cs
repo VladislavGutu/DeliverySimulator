@@ -6,5 +6,6 @@ public enum ShopType
 {
     KFC,
     MC,
-    Pizza
+    Pizza,
+    Sushi
 }
