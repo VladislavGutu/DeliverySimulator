@@ -40,7 +40,6 @@ public class ShopMission : MonoBehaviour
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[3];
                 break;
         }
-        Debug.LogError("HUILA");
     }
 
     private void OnTriggerEnter(Collider other)
