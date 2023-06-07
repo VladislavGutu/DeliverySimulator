@@ -19,7 +19,7 @@ public class ShopMission : MonoBehaviour
         Invoke(nameof(SetShopIcon), .5f);
     }
 
-    private void SetShopIcon()
+    public void SetShopIcon()
     {
         switch (shopType)
         {
@@ -40,6 +40,7 @@ public class ShopMission : MonoBehaviour
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[3];
                 break;
         }
+        Debug.LogError("HUILA");
     }
 
     private void OnTriggerEnter(Collider other)

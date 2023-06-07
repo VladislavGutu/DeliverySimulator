@@ -266,6 +266,7 @@ namespace SickscoreGames.HUDNavigationSystem
 
 			// assign indicator prefab
 			Indicator = indicatorGO.GetComponent<HNSIndicatorPrefab> ();
+			// indicatorGO.GetComponent<ShopMission>().SetShopIcon();
 		}
 
 
