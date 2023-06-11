@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -121,7 +122,7 @@ namespace SickscoreGames.HUDNavigationSystem
 			// remove element from the navigation system
 			if (HUDNavigationSystem.Instance != null)
 				HUDNavigationSystem.Instance.RemoveNavigationElement (this);
-
+		
 			// destroy all marker references
 			if (Radar != null)
 				Destroy (Radar.gameObject);
@@ -263,9 +264,14 @@ namespace SickscoreGames.HUDNavigationSystem
 			GameObject indicatorGO = Instantiate (Prefabs.IndicatorPrefab.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
 			indicatorGO.transform.SetParent (HUDNavigationCanvas.Instance.Indicator.ElementContainer, false);
 			indicatorGO.SetActive (false);
-
 			// assign indicator prefab
 			Indicator = indicatorGO.GetComponent<HNSIndicatorPrefab> ();
+
+			DOVirtual.DelayedCall(0.5f, () =>
+			{
+				indicatorGO.GetComponent<ShopMission>().SetShopIcon();
+				Debug.LogError("HUILA");
+			});
 		}
 
 

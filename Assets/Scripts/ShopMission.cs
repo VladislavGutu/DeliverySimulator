@@ -19,7 +19,7 @@ public class ShopMission : MonoBehaviour
         Invoke(nameof(SetShopIcon), .5f);
     }
 
-    private void SetShopIcon()
+    public void SetShopIcon()
     {
         switch (shopType)
         {
