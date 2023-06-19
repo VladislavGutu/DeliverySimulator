@@ -46,9 +46,8 @@ public class ShopMission : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse == null)
         {
-            Debug.LogError($"<color=green> Shop Triger Activate </color>");
+            Debug.LogError($"<color=green> Shop Trigger Activate </color>");
             MissionManager.instance.CommandStart(shopType);
-
         }
     }
 }

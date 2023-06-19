@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: House_Material
+  m_Name: Restaurant
   m_Shader: {fileID: -6465566751694194690, guid: 2e5f5fd60c14b41acace5f20e91019e7,
     type: 3}
   m_Parent: {fileID: 0}
@@ -77,10 +77,10 @@ Material:
     m_Floats:
     - _Emmision: 130
     - _Float: 0.27
-    - _Height: -0.1
+    - _Height: -0.08
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _alfa: 0.063
+    - _alfa: 0.04
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0.9111886, a: 0}
+    - _Color: {r: 0.03191495, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

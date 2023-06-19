@@ -3,18 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateHomeIcon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotateHomeIcon.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Shop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/CompassBarPrefab_Default.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/CompassBarPrefab_Default.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/HouseIcon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/HouseIcon.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/IndicatorPrefab_Default.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/IndicatorPrefab_Default.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/ShopIcon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Sickscore Games/HUD-Navigation-System/Resources/Prefabs/HUDPrefabs/ShopIcon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/House_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Atlas-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Atlas-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/SpawnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RorationScripts/RotateIcon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RotateHomeIcon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/AllNeededReferences.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/UnityVectorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -37,23 +34,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "rider.run.widget.enabled.cache": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/Users/vladislavgutu/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/vladislavgutu/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/delivery/delivery.app/Contents/MacOS/BMX" />
@@ -125,6 +122,8 @@
       <workItem from="1684999836992" duration="9894000" />
       <workItem from="1686041889964" duration="6184000" />
       <workItem from="1686081330427" duration="751000" />
+      <workItem from="1687190767748" duration="1369000" />
+      <workItem from="1687192459513" duration="3733000" />
     </task>
     <servers />
   </component>
