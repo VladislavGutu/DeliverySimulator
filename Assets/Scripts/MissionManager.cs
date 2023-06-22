@@ -29,6 +29,8 @@ public class MissionManager : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> _listMission;
+    [SerializeField]
+    private List<OrdersSetInfo> _listMissionOrders;
 
     public GameObject CurrentMission, currentDisplayMission;
     [SerializeField]
@@ -45,6 +47,28 @@ public class MissionManager : MonoBehaviour
         Invoke(nameof(AddMission), 1.5f);
         // AddMission();
         StartCoroutine(MissionAddTimer());
+    }
+
+    private void Update()
+    {
+        if (_listMission.Count > 0)
+        {
+            for (int i = 0; i < _listMissionOrders.Count; i++)
+            {
+                if (_listMissionOrders[i]._isTimerActive)
+                {
+                    if (_listMissionOrders[i]._timer < 0)
+                    {
+                        _listMissionOrders[i]._isTimerActive = false;
+                        Destroy(_listMissionOrders[i].gameObject);
+                        RemoveListUpdate();
+                    }
+
+                    _listMissionOrders[i]._timer -= Time.deltaTime;
+                    _listMissionOrders[i]._imageTimer.fillAmount = _listMissionOrders[i]._timer / _listMissionOrders[i]._maxTimer;
+                }
+            }
+        }
     }
 
     IEnumerator MissionAddTimer()
@@ -96,12 +120,13 @@ public class MissionManager : MonoBehaviour
         if(_listMission.Count > 6)
             return;
         
+        int tempIndex = Random.Range(1, 4);
         ShopMission tempShopMission = _shopList[Random.Range(0, _shopList.Count)].GetComponent<ShopMission>();
         GameObject tempMiss = Instantiate(_prefabMission, _contentSpawnMission);
         OrdersSetInfo tempOrdersSetInfo = tempMiss.GetComponent<OrdersSetInfo>();
+                    tempOrdersSetInfo._maxTimer -= (10 * tempIndex); 
         tempOrdersSetInfo.OrdersSetInfoShop(tempShopMission.icoShop, tempShopMission.shopType.ToString(), tempShopMission.shopType);
 
-        int tempIndex = Random.Range(1, 4);
         for (int i = 0; i <= tempIndex; i++)
         {
             for (int j = 0; j < shopProduct.shop.Count; j++)
@@ -115,6 +140,7 @@ public class MissionManager : MonoBehaviour
             }
         }
         _listMission.Add(tempMiss);
+        _listMissionOrders.Add(tempOrdersSetInfo);
     }
 
     public void StartMission(GameObject mission)
@@ -139,8 +165,13 @@ public class MissionManager : MonoBehaviour
     {
         Destroy(CurrentMission);
         Destroy(currentDisplayMission);
-        _listMission.RemoveAll(x => x == null);
+        RemoveListUpdate();
         StartCoroutine(MissionAddTimer());
     }
-    
+
+    private void RemoveListUpdate()
+    {
+        _listMission.RemoveAll(x => x == null);
+        _listMissionOrders.RemoveAll(x => x == null);
+    }
 }

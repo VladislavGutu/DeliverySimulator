@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopProduct.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopProduct.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/OrderPrefabNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/OrderPrefabNew.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Integration/StylizedVehiclePack.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +40,10 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mission/ProductSetInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" />
     </changedPaths>
   </component>
@@ -145,7 +139,7 @@
       <workItem from="1687192459513" duration="3733000" />
       <workItem from="1687367394174" duration="334000" />
       <workItem from="1687367762405" duration="9600000" />
-      <workItem from="1687436445449" duration="5562000" />
+      <workItem from="1687436445449" duration="9096000" />
     </task>
     <servers />
   </component>
