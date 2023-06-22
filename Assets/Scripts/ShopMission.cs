@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using SickscoreGames.HUDNavigationSystem;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,8 @@ public class ShopMission : MonoBehaviour
     public ShopType shopType;
     public List<Sprite> _shopSprite;
 
+    public Sprite icoShop;
+    
     private void Start()
     {
         Invoke(nameof(SetShopIcon), .5f);
@@ -26,18 +29,22 @@ public class ShopMission : MonoBehaviour
             case ShopType.Pizza:
                 _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[0];
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[0];
+                icoShop = _shopSprite[0];
                 break;
             case ShopType.MC:
                 _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[1];
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[1];
+                icoShop = _shopSprite[1];
                 break;
             case ShopType.KFC:
                 _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[2];
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[2];
+                icoShop = _shopSprite[2];
                 break;
             case ShopType.Sushi:
                 _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[3];
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[3];
+                icoShop = _shopSprite[3];
                 break;
         }
     }

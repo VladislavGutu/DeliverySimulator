@@ -50,19 +50,19 @@ public class SettingUpRestaurant : MonoBehaviour
             {
                 case ShopType.Pizza:
                     Debug.LogError("Pizza Scene");
-                    SceneManager.LoadScene("Pizza");
+                    //SceneManager.LoadScene("Pizza");
                     break;
                 case ShopType.MC:
                     Debug.LogError("MC Scene");
-                    SceneManager.LoadScene("MC");
+                    //SceneManager.LoadScene("MC");
                     break;
                 case ShopType.KFC:
                     Debug.LogError("KFC Scene");
-                    SceneManager.LoadScene("KFC");
+                    //SceneManager.LoadScene("KFC");
                     break;
                 case ShopType.Sushi:
                     Debug.LogError("Sushi Scene");
-                    SceneManager.LoadScene("Sushi");
+                    //SceneManager.LoadScene("Sushi");
                     break;
             }
         }
