@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/OrderPrefabNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/OrderPrefabNew.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -139,7 +140,9 @@
       <workItem from="1687192459513" duration="3733000" />
       <workItem from="1687367394174" duration="334000" />
       <workItem from="1687367762405" duration="9600000" />
-      <workItem from="1687436445449" duration="9096000" />
+      <workItem from="1687436445449" duration="9630000" />
+      <workItem from="1687871854718" duration="2672000" />
+      <workItem from="1687937991999" duration="1224000" />
     </task>
     <servers />
   </component>
