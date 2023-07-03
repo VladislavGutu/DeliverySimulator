@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum ShopType
 {
+    None,
     KFC,
     MC,
     Pizza,

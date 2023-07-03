@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/KFC.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/KFC.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,27 +29,34 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mission/MissionActual.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mission/ProductSetInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Exit_Shop_Interior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/UnityVectorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/AllNeededReferences.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/SpawnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RorationScripts/RotateIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mission/ProductSetInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/AllNeededReferences.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mission/ProductSetInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mission/OrdersSetInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Mission/ShopType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Exit_Shop_Interior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Mission.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -142,7 +153,7 @@
       <workItem from="1687367762405" duration="9600000" />
       <workItem from="1687436445449" duration="9630000" />
       <workItem from="1687871854718" duration="2672000" />
-      <workItem from="1687937991999" duration="1224000" />
+      <workItem from="1687937991999" duration="8524000" />
     </task>
     <servers />
   </component>

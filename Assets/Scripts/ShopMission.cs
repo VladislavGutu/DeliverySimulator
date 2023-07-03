@@ -51,10 +51,28 @@ public class ShopMission : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse == null)
+        if (other.gameObject.tag.Contains("Player"))
         {
-            Debug.LogError($"<color=green> Shop Trigger Activate </color>");
-            MissionManager.instance.CommandStart(shopType);
+            // MissionManager.instance.CommandStart(shopType);
+            MissionManager.instance.ShowPopapEnterExit(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag.Contains("Player"))
+            MissionManager.instance.ShowPopapEnterExit(false);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag.Contains("Player"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.LogError($"<color=green> Shop Trigger Activate </color>");
+               MissionManager.instance.EnterShop(shopType, this.gameObject);
+            }
         }
     }
 }
