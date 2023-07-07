@@ -27,6 +27,7 @@ public class HouseFinishDeliver : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.LogError($"<color=green> House Triger Activate </color>");
+                MissionManager.instance.ShowPopapEnterExit(false);
                 MissionManager.instance.CommandStop();
             }
         }

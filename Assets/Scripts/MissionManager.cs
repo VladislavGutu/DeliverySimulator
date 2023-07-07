@@ -44,7 +44,9 @@ public class MissionManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _distaceToTheHouse;
 
+    [SerializeField] private Image displayRating;
 
+    private int _stars = 5;
     private bool _isShop = false;
     private void Awake()
     {
@@ -53,7 +55,7 @@ public class MissionManager : MonoBehaviour
         player = FindObjectOfType<CharacterController>();
         _showPopapEnterExit.SetActive(false);
         _distaceToTheHouse.gameObject.SetActive(false);
-        
+
         foreach (var t in _houseList)
         {
             t.SetActive(false);
@@ -61,6 +63,11 @@ public class MissionManager : MonoBehaviour
         Invoke(nameof(AddMission), 1.5f);
         // AddMission();
         StartCoroutine(MissionAddTimer());
+    }
+
+    private void Start()
+    {
+        CheckRating();
     }
 
     private void Update()
@@ -140,8 +147,9 @@ public class MissionManager : MonoBehaviour
         ShowPopapEnterExit(false);
         actualHouse.SetActive(true);
         _distaceToTheHouse.gameObject.SetActive(true);
-        _distaceToTheHouse.text = Vector3.Distance(actualShop.transform.position,actualHouse.transform.position).ToString();
-
+        float tempDistance = Vector3.Distance(actualShop.transform.position, actualHouse.transform.position);
+        _distaceToTheHouse.text = tempDistance.ToString();
+        currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(tempDistance / 1.5f);
     }
 
     public void CommandStop()
@@ -149,7 +157,7 @@ public class MissionManager : MonoBehaviour
         actualHouse.SetActive(false);
         actualHouse = null;
 
-        MissionComplet();
+        MissionComplet(false);
     }
 
     private void AddMission()
@@ -195,21 +203,88 @@ public class MissionManager : MonoBehaviour
 
         currentDisplayMission = tempMiss;
         UIManager.instance.OpenClosePanel(UIManager.instance.missionPanel);
-        actualShopInterior.MissionCheck(tempmissionOrdersSetInfo.shopTypeMission);
+        if(actualShopInterior != null)
+            actualShopInterior.MissionCheck(tempmissionOrdersSetInfo.shopTypeMission);
         CurrentMission.SetActive(false);
     }
     
-    public void MissionComplet()
+    public void MissionComplet(bool isFail)
     {
+        _distaceToTheHouse.gameObject.SetActive(false);
         Destroy(CurrentMission);
         Destroy(currentDisplayMission);
         RemoveListUpdate();
         StartCoroutine(MissionAddTimer());
+        ShowPopapEnterExit(false);
+        
+        if (isFail)
+        {
+            Debug.LogError($"Mission Fail");
+            SaveManager.instance.saveData.rating[0] += 1;
+        }
+        else
+        {
+            Debug.LogError($"Mission Compete -> {_stars} Stars");
+            SaveManager.instance.saveData.rating[_stars] += 1;
+        }
+
+        _stars = 5;
+
+        CheckRating();
     }
 
     private void RemoveListUpdate()
     {
         _listMission.RemoveAll(x => x == null);
         _listMissionOrders.RemoveAll(x => x == null);
+    }
+
+    public void TimeOUT()
+    {
+        _stars--;
+
+        switch (_stars)
+        {
+            case 4:
+                currentDisplayMission.GetComponent<OrdersSetInfo>().heatStatus.color = Color.yellow;
+                currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(10f);
+                break;
+            case 3:
+                currentDisplayMission.GetComponent<OrdersSetInfo>().heatStatus.color = Color.yellow;
+                currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(10f);
+                break;
+            case 2:
+                currentDisplayMission.GetComponent<OrdersSetInfo>().heatStatus.color = Color.red;
+                currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(10f);
+                break;
+            case 1:
+                currentDisplayMission.GetComponent<OrdersSetInfo>().heatStatus.color = Color.red;
+                currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(10f);
+                break;
+            case 0:
+                MissionComplet(true);
+                break;
+        }
+    }
+    
+    private void CheckRating()
+    {
+        int numRating = 0, numXmun = 0;
+        for (int i = 0; i < SaveManager.instance.saveData.rating.Length; i++)
+        {
+            numRating += SaveManager.instance.saveData.rating[i];
+            numXmun += (SaveManager.instance.saveData.rating[i] * i);
+        }
+
+        if (numRating != 0 && numXmun != 0)
+        {
+            float tempRating = numXmun / numRating;
+            SaveManager.instance.saveData.averagRating = tempRating;
+            displayRating.fillAmount = tempRating / 5;
+        }
+        else
+        {
+            displayRating.fillAmount = 0;
+        }
     }
 }

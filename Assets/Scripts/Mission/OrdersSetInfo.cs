@@ -27,33 +27,50 @@ public class OrdersSetInfo : MonoBehaviour
     public int _price;
     public List<GameObject> _orders;
 
-    
+    public bool _isHeatTimerActive = false;
+    public Image heatStatus;
+    public float _heatMaxTimer;
+    public float _heatTimer;
     private void Awake()
     {
         if(_ordersButton != null)
             _ordersButton.onClick.AddListener(() => { OrdersActivate();});
-        
+        if(heatStatus != null)
+            heatStatus.transform.parent.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        // if (_isTimerActive)
-        // {
-        //     if (_timer < 0)
-        //     {
-        //         _isTimerActive = false;
-        //         Destroy(this.gameObject);
-        //     }
-        //     
-        //     _timer -= Time.deltaTime;
-        //     _imageTimer.fillAmount = _timer / _maxTimer;
-        // }
+        if (_isHeatTimerActive)
+        {
+            if (_heatTimer < 0)
+            {
+                _isHeatTimerActive = false;
+                MissionManager.instance.TimeOUT();
+                //Destroy(this.gameObject);
+            }
+            
+            _heatTimer -= Time.deltaTime;
+            heatStatus.fillAmount = _heatTimer / _heatMaxTimer;
+        }
     }
 
     private void OrdersActivate()
     {
         _isTimerActive = false;
         MissionManager.instance.StartMission(this.gameObject);
+    }
+
+    public void OrderHeatStatus(float timeHeat)
+    {
+        if (heatStatus != null)
+        {
+            _isHeatTimerActive = true;
+            _heatMaxTimer = timeHeat;
+            _heatTimer = timeHeat;
+            heatStatus.transform.parent.gameObject.SetActive(true);
+        }
+
     }
     
     public void OrdersSetInfoShop(Sprite icoShop, string nameShop, ShopType shopType)
