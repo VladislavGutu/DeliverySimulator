@@ -99,8 +99,13 @@ namespace SBPScripts
                         cyclist.SetActive(false);
                         if(Input.GetKeyDown(KeyCode.R))
                         {
-                            cyclist.SetActive(true);
+                            // cyclist.SetActive(true);
                             bicycleStatus.dislodged = false;
+                            bicycleStatus.onBike = false;
+
+                            cyclist.SetActive(false);
+                            externalCharacter.SetActive(true);
+                            externalCharacter.transform.position = new Vector3(bicycleStatus.instantiatedRagdoll.transform.root.position.x, bicycleStatus.instantiatedRagdoll.transform.root.position.y + 0.2f, bicycleStatus.instantiatedRagdoll.transform.root.position.z);
                         }
                     }
                 }

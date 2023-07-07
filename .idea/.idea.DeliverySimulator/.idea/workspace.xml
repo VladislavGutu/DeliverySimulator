@@ -51,6 +51,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleStatus.cs" />
+      <option value="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -149,7 +151,7 @@
       <workItem from="1687871854718" duration="2672000" />
       <workItem from="1687937991999" duration="12870000" />
       <workItem from="1688625706093" duration="6228000" />
-      <workItem from="1688710746497" duration="3704000" />
+      <workItem from="1688710746497" duration="5302000" />
     </task>
     <servers />
   </component>
