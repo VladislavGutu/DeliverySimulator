@@ -236,15 +236,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 40
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16b363d7860edb64c8ae990f0e65c7f0, type: 2}
+  m_sharedMaterial: {fileID: 4056247341579395123, guid: 16b363d7860edb64c8ae990f0e65c7f0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278676480
-  m_fontColor: {r: 0, g: 0.4245283, b: 0.029295998, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.35
+  m_fontSize: 41.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -573,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11792451, g: 0.7732751, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.14895588, b: 0.11764705, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 60, y: 60, z: 60, w: 60}
   m_Maskable: 1
@@ -834,6 +835,10 @@ MonoBehaviour:
   _isTimerActive: 0
   _price: 0
   _orders: []
+  _isHeatTimerActive: 0
+  heatStatus: {fileID: 0}
+  _heatMaxTimer: 0
+  _heatTimer: 0
 --- !u!1 &8234198468488665617
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,8 +907,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: PIzza
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16b363d7860edb64c8ae990f0e65c7f0, type: 2}
+  m_sharedMaterial: {fileID: 4056247341579395123, guid: 16b363d7860edb64c8ae990f0e65c7f0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1037,8 +1043,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e448512132e1ef45a72543d4e82cb03, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 040be0e474e09894ca320b08d9462cc8, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1046,7 +1052,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3.5
 --- !u!114 &6946878144043769049
 MonoBehaviour:
   m_ObjectHideFlags: 0
