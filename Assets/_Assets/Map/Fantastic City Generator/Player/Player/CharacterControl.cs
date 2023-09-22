@@ -45,7 +45,7 @@ public class CharacterControl : MonoBehaviour
 
         xRotation -= md.y;
 
-        // cam.localRotation = Quaternion.Euler(Mathf.Clamp(xRotation, -70, 70), 0, 0);
+        cam.localRotation = Quaternion.Euler(Mathf.Clamp(xRotation, -70, 70), 0, 0);
 
         transform.transform.Rotate(Vector3.up * md.x);
 
