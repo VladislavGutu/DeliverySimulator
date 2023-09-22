@@ -75,7 +75,7 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/delivery/delivery.app/Contents/MacOS/BMX" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/DeliveryBuild/build.app/Contents/MacOS/BMX" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\Desktop\TestMultiplayer" />
       <option name="PASS_PARENT_ENVS" value="1" />

@@ -30,8 +30,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   lift:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -0.08241758}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.0663716}
   gamma:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: -0.082417585}
@@ -52,11 +52,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   contrast:
     m_OverrideState: 1
-    m_Value: 35
+    m_Value: 2.7
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 32
+    m_Value: 5.2
 --- !u!114 &6337187480401002949
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -103,7 +103,6 @@ MonoBehaviour:
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
-    dimension: 1
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 0

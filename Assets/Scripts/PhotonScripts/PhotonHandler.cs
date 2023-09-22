@@ -16,6 +16,6 @@ public class PhotonHandler : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuMultiplayer");
     }
 }
