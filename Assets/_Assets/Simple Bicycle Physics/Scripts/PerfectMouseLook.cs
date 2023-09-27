@@ -32,7 +32,21 @@ namespace SBPScripts
             var targetCharacterOrientation = Quaternion.Euler(targetCharacterDirection);
 
             // Get raw mouse input for a cleaner reading on more sensitive mice.
+            Vector2 mouseDelta;
+#if UNITY_SWITCH// && !UNITY_EDITOR
+            if (NintendoInput.isEditorInputActiv)
+            {
+
+                mouseDelta = new Vector2(NintendoInput.InputNpadAxis(NintendoInput.NpadAxis.RightHorizontal),
+                    NintendoInput.InputNpadAxis(NintendoInput.NpadAxis.RightVertical));
+            }
+            else
+            {
+                mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            }
+#else
             var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+#endif
 
             // Scale input against the sensitivity setting and multiply that against the smoothing value.
             mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));

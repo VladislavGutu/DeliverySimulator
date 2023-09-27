@@ -36,7 +36,7 @@ public class MobileControl : MonoBehaviour, IDragHandler , IPointerUpHandler, IP
     private void Awake()
     {
 
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
 
 
         analogLeft = transform.Find("AnalogLeft").gameObject;

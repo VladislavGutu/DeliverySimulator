@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 
 public class TrafficCar : MonoBehaviour
@@ -110,6 +112,10 @@ public class TrafficCar : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        Configure();
+    }
 
     public void Configure()
     {
