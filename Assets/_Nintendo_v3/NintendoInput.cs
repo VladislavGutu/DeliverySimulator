@@ -37,7 +37,7 @@ public static class NintendoInput
     public static int playerCount = 1;
     public static bool isActivInput = true;
 
-    public static bool isEditorInputActiv = true;
+    public static bool isEditorInputActiv = false;
     
     private static HidNintendoInputSingle hid_NDI_Single;
 

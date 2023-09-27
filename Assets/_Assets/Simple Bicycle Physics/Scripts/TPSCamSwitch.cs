@@ -60,13 +60,13 @@ namespace SBPScripts
                     bicycleCamera.target = bicycleStatus.instantiatedRagdoll.transform.Find("mixamorig:Hips").gameObject
                         .transform;
                     _TPSCameraControll.enabled = true;
-                    _FPSCameraControll.enabled = false;
+                    //_FPSCameraControll.enabled = false;
                 }
                 else if (externalCharacter == null)
                 {
                     bicycleCamera.target = cyclist.transform.root.transform;
                     _TPSCameraControll.enabled = false;
-                    _FPSCameraControll.enabled = true;
+                    //_FPSCameraControll.enabled = true;
                 }
         }
     }

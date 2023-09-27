@@ -12,7 +12,7 @@ namespace SBPScripts
         public bool dislodged;
         public float impactThreshold;
         public GameObject ragdollPrefab;
-        [HideInInspector]
+        //[HideInInspector]
         public GameObject instantiatedRagdoll;
         bool prevOnBike, prevDislodged;
         public GameObject inactiveColliders;

@@ -487,12 +487,34 @@ namespace SBPScripts
 
 
                 //Stateful Input - bunny hopping
-                if (Input.GetKey(KeyCode.Space))
-                    bunnyHopInputState = 1;
-                else if (Input.GetKeyUp(KeyCode.Space))
-                    bunnyHopInputState = -1;
+#if UNITY_SWITCH
+                
+                if (NintendoInput.isEditorInputActiv)
+                {
+                    if (NintendoInput.InputNpadButton(NpadButton.B))
+                        bunnyHopInputState = 1;
+                    else if (NintendoInput.InputNpadButtonUp(NpadButton.B))
+                        bunnyHopInputState = -1;
+                    else
+                        bunnyHopInputState = 0;
+                }
                 else
-                    bunnyHopInputState = 0;
+                {
+                    if (Input.GetKey(KeyCode.Space))
+                        bunnyHopInputState = 1;
+                    else if (Input.GetKeyUp(KeyCode.Space))
+                        bunnyHopInputState = -1;
+                    else
+                        bunnyHopInputState = 0;
+                }
+#else                
+                    if (Input.GetKey(KeyCode.Space))
+                        bunnyHopInputState = 1;
+                    else if (Input.GetKeyUp(KeyCode.Space))
+                        bunnyHopInputState = -1;
+                    else
+                        bunnyHopInputState = 0;
+#endif
 
                 //Record
                 if (wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
