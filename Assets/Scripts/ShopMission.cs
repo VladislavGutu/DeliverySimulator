@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_SWITCH
+using nn.hid;
+#endif
 using SickscoreGames.HUDNavigationSystem;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,12 +13,12 @@ using Random = UnityEngine.Random;
 public class ShopMission : MonoBehaviour
 {
     public HUDNavigationElement _hudNavigationElement;
-    
+
     public ShopType shopType;
     public List<Sprite> _shopSprite;
 
     public Sprite icoShop;
-    
+
     private void Start()
     {
         Invoke(nameof(SetShopIcon), .5f);
@@ -67,10 +70,20 @@ public class ShopMission : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player"))
         {
+#if UNITY_SWITCH
+            bool isEnterExit;
+            if (NintendoInput.isEditorInputActiv)
+                isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+            else
+                isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+            if (isEnterExit)
+#else
             if (Input.GetKeyDown(KeyCode.E))
+#endif
             {
                 Debug.LogError($"<color=green> Shop Trigger Activate </color>");
-               MissionManager.instance.EnterShop(shopType, this.gameObject);
+                MissionManager.instance.EnterShop(shopType, this.gameObject);
             }
         }
     }

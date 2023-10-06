@@ -5,180 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_Switch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserSettings/Search.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/Fast Food Restaurant Kit/_Prefabs/Bartender/m/Ch13_hair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/Fast Food Restaurant Kit/_Prefabs/Bartender/m/Ch13_hair.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_SoapLabel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_SoapLabel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/051614OFFRD-HD-wheeltyre.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/051614OFFRD-HD-wheeltyre.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/AmareloPainel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/AmareloPainel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/CouroP310.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/CouroP310.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_chrome_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_chrome_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_clearglass_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_clearglass_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_grid_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_grid_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_interior_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_interior_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_interior_MAT_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_interior_MAT_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_red_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_red_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ECitaro_yellow_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ECitaro_yellow_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/GPS_Painel_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/GPS_Painel_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/P.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/P.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/PainelAXOR.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/PainelAXOR.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/PainelESquerda.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/PainelESquerda.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/PainelVM.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/PainelVM.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Pneu1_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Pneu1_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Pneu2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Pneu2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Ponteiro1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Ponteiro1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Ponteiro2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Ponteiro2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Retarder.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Retarder.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/RetrovisorDireito.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/RetrovisorDireito.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/RetrovisorEsquerdo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/RetrovisorEsquerdo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/RimBlackPaint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/RimBlackPaint.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_SwimbusEcitaroTorsus.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SingleTEX_MAT_SwimbusEcitaroTorsus.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/blackdiffuse 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/blackdiffuse 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/blackdiffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/blackdiffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/fundoLetreiro.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/fundoLetreiro.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-PainelInstrumentos.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-PainelInstrumentos.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-detalhesEXT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-detalhesEXT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-detalhesINT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-detalhesINT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-limpadores.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-limpadores.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-vidroschuvaEXT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-vidroschuvaEXT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5-vidroschuvaINT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5-vidroschuvaINT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/g5vidrosfarol.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/g5vidrosfarol.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/letreiro1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/letreiro1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/phong1_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/phong1_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Important Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Important Materials/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/carmaterials/caliper.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/carmaterials/caliper.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/carmaterials/carpaint_RPM.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/carmaterials/carpaint_RPM.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/carmaterials/carpaint_SPEED.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/carmaterials/carpaint_SPEED.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/carmaterials/disk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/carmaterials/disk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/insidesignallightmaterials/carpaint_insidearrowL.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/insidesignallightmaterials/carpaint_insidearrowL.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/insidesignallightmaterials/carpaint_insidearrowR.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/insidesignallightmaterials/carpaint_insidearrowR.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Material/House_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/Material/House_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/door glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/door glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass beer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass beer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass bottle 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass bottle 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass bottle3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass bottle3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass cup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass cup.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/glass glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/liquid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/liquid.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/tavern glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/tavern glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/wine bottle glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/wine bottle glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Beer tap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Beer tap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/BeerMug.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/BeerMug.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bench.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Botle 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Botle 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bottle 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bottle 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bottle 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Bottle 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Brioche.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Brioche.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Cash register.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Cash register.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ceiling.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ceiling.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Closet bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Closet bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee (2).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee (2).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee machine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee machine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Coffee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Column.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Column.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Empty cup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Empty cup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Floor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Floor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 1 (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 1 (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Furniture 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Glass 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Glass 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Hanger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Hanger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ice coffee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ice coffee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ketchup Mustard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ketchup Mustard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ketchup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Ketchup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Lamp 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Lamp 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Lamp 2 (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Lamp 2 (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Mustard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Mustard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Napkin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Napkin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 1_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 1_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 2_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 3_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 4_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5 (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5 (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 5_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 6_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Picture 6_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Pictures 2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Pictures 2_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Plant 3 bambu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Plant 3 bambu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Table 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Table 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Table 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Table 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Wall 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/Wall 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/beer glass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/beer glass.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/chair1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/chair1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/chair2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/chair2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/cup 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/cup 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/cup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/cup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/dart board.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/dart board.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/door.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/doors wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/doors wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/entrance door wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/entrance door wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/inside wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/inside wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/windows wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/windows wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle 2 (2).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle 2 (2).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Prefabs/wine bottle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Valore/Material/RetrovisorDesligado.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Valore/Material/RetrovisorDesligado.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/Coconut Palm Tree Pack/Materials/Coconut_Palm_Tree_AFS.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/Coconut Palm Tree Pack/Materials/Coconut_Palm_Tree_AFS.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/PalmTreePack/Models/Palm1/Materials/Palm_Leaf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/PalmTreePack/Models/Palm1/Materials/Palm_Leaf.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/PalmTreePack/Models/Palm2/Materials/Palm_Leaf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/ARCHIVE/PalmTreePack/Models/Palm2/Materials/Palm_Leaf.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Player/Player Mobile/MobileControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Player/Player Mobile/MobileControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Grade1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Grade1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Grade2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Grade2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Trees-01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Trees-01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Textures/Materials/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/YughuesFreeBushes2018/Materials/M_Bush04.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_02/Materials/WindowsAlbedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_02/Materials/WindowsAlbedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_04/Materials/BodyAlbedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_04/Materials/BodyAlbedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_04/Materials/Misc_Albedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Civilian_vehicle_04/Materials/Misc_Albedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Jeep01/Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Jeep01/Materials/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Suv/Materials/WindowsAlbedo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Misc Assets/Car Assets/UrbanTraffic - pro 3d models/Vehicle/Suv/Materials/WindowsAlbedo.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Materials/RiderGlasses.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Materials/RiderGlasses.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/EcitaroDark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/EcitaroDark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/Glass1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/Glass1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/Gray2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/Gray2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/sides.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Materials/ECitaro/sides.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Materials/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-Pintura.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-Pintura.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-Vidros.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-Vidros.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-detalhesEXT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-detalhesEXT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-detalhesINT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-detalhesINT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-limpadores.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/NewBusMaterials/GV/g5-limpadores.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/LightsTorsus.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/LightsTorsus.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Mirror.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Mirror.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Pribornaia.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Pribornaia.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Rim1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Bus/Prefabs/URP/Rim1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exit_Shop_Interior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Exit_Shop_Interior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Mission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Mission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/PerfectMouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/PerfectMouseLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Nintendo_v3/NintendoInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Nintendo_v3/NintendoInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,8 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop_Interior_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/AllNeededReferences.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/UnityVectorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@13.1.8/Editor/Drawing/SearchWindowProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Nintendo_v3/NintendoInput.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -354,6 +190,8 @@
       <workItem from="1688710746497" duration="5302000" />
       <workItem from="1695392735211" duration="625000" />
       <workItem from="1695718316941" duration="2711000" />
+      <workItem from="1695739658953" duration="24122000" />
+      <workItem from="1696490610024" duration="722000" />
     </task>
     <servers />
   </component>

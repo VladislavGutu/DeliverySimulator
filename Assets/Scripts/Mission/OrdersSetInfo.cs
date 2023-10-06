@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class OrdersSetInfo : MonoBehaviour
@@ -17,7 +18,7 @@ public class OrdersSetInfo : MonoBehaviour
     [SerializeField]
     private GameObject _prefabProduct;
 
-    [SerializeField] private Button _ordersButton;
+    [SerializeField] public Button _ordersButton;
      public Image _imageTimer;
      public float _maxTimer;
     public float _timer;
@@ -59,6 +60,7 @@ public class OrdersSetInfo : MonoBehaviour
     {
         _isTimerActive = false;
         MissionManager.instance.StartMission(this.gameObject);
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void OrderHeatStatus(float timeHeat)

@@ -457,7 +457,16 @@ namespace SBPScripts
                 CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
                 CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
 
+#if UNITY_SWITCH
+                bool isSprint;
+                if (NintendoInput.isEditorInputActiv)
+                    isSprint = NintendoInput.InputNpadButton(NpadButton.L) && canSprint;
+                else
+                    isSprint = Input.GetKey(KeyCode.LeftShift) && canSprint;
+                if (isSprint)
+#else
                 if (Input.GetKey(KeyCode.LeftShift) && canSprint)
+#endif
                 {
                     if (_staminaCurrentAmount > 0)
                     {
@@ -488,7 +497,7 @@ namespace SBPScripts
 
                 //Stateful Input - bunny hopping
 #if UNITY_SWITCH
-                
+
                 if (NintendoInput.isEditorInputActiv)
                 {
                     if (NintendoInput.InputNpadButton(NpadButton.B))
@@ -507,7 +516,7 @@ namespace SBPScripts
                     else
                         bunnyHopInputState = 0;
                 }
-#else                
+#else
                     if (Input.GetKey(KeyCode.Space))
                         bunnyHopInputState = 1;
                     else if (Input.GetKeyUp(KeyCode.Space))

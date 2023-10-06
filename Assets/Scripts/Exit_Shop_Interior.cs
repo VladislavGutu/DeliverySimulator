@@ -1,13 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_SWITCH
+using nn.hid;
+#endif
 using UnityEngine;
 
 public class Exit_Shop_Interior : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _exit;
-    
+    [SerializeField] private GameObject _exit;
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag.Contains("Player") && _exit != null && !_exit.activeInHierarchy)
@@ -27,16 +29,25 @@ public class Exit_Shop_Interior : MonoBehaviour
             MissionManager.instance.ShowPopapEnterExit(true);
         }
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Contains("Player") && _exit != null && _exit.activeInHierarchy)
         {
+#if UNITY_SWITCH
+            bool isEnterExit;
+            if (NintendoInput.isEditorInputActiv)
+                isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+            else
+                isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+            if (isEnterExit)
+#else
             if (Input.GetKeyDown(KeyCode.E))
+#endif
             {
                 MissionManager.instance.ExitShop();
             }
         }
     }
-
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HouseFinishDeliver : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
@@ -24,7 +23,17 @@ public class HouseFinishDeliver : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
         {
+#if UNITY_SWITCH
+            bool isEnterExit;
+            if (NintendoInput.isEditorInputActiv)
+                isEnterExit = NintendoInput.InputNpadButtonDown(nn.hid.NpadButton.A);
+            else
+                isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+            if (isEnterExit)
+#else
             if (Input.GetKeyDown(KeyCode.E))
+#endif
             {
                 Debug.LogError($"<color=green> House Triger Activate </color>");
                 MissionManager.instance.ShowPopapEnterExit(false);
@@ -32,5 +41,4 @@ public class HouseFinishDeliver : MonoBehaviour
             }
         }
     }
-    
 }

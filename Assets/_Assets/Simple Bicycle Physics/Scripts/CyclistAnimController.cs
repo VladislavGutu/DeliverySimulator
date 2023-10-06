@@ -54,7 +54,7 @@ namespace SBPScripts
                 bool tempAction = false;
                 if (NintendoInput.isEditorInputActiv)
                 {
-                    tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.A) &&
+                    tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.Y) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
                                   0.1f && waitTime == 0);

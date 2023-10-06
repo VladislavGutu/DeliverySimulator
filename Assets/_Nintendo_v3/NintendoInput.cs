@@ -8,6 +8,8 @@ using UnityEngine.EventSystems;
 
 public static class NintendoInput
 {
+    public static bool isEditorInputActiv = true;
+    
     enum NpadBTStyle
     {
         None,
@@ -37,7 +39,6 @@ public static class NintendoInput
     public static int playerCount = 1;
     public static bool isActivInput = true;
 
-    public static bool isEditorInputActiv = false;
     
     private static HidNintendoInputSingle hid_NDI_Single;
 
@@ -51,11 +52,13 @@ public static class NintendoInput
         main.AddComponent<UI_Nintendo_Navigation>();
         hid_NDI_Single = main.GetComponent<HidNintendoInputSingle>();
         GameObject.DontDestroyOnLoad(main);
+#if !UNITY_EDITOR
+        isEditorInputActiv = true;
+#endif
     }
 
 
     
-    #region Test Input
     //NintendoInput.InputNpadButton(NpadButton.X, playerNumber)
     internal static bool InputNpadButton(NpadButton npadButton, int player = 1)
     {
@@ -77,6 +80,7 @@ public static class NintendoInput
         return CheckInputNpadStyleAxis(player, NpadAxis);
     }
 
+    #region BackInput
     private static float CheckInputNpadStyleAxis(int player = 1, NpadAxis npadAxis = NpadAxis.None)
     {
         if (playerCount < player || !isActivInput)

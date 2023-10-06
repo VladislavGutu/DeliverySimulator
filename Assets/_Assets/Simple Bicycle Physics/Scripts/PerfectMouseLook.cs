@@ -13,43 +13,38 @@ namespace SBPScripts
         public Vector2 smoothing = new Vector2(3, 3);
         public Vector2 targetDirection;
         public Vector2 targetCharacterDirection;
-        [HideInInspector]
-        public bool movement;
+        [HideInInspector] public bool movement;
         public bool autoRotate;
 
         void Start()
         {
             // Set target direction to the camera's initial orientation.
             targetDirection = transform.localRotation.eulerAngles;
-
         }
 
         void LateUpdate()
         {
-
             // Allow the script to clamp based on a desired target value.
             var targetOrientation = Quaternion.Euler(targetDirection);
             var targetCharacterOrientation = Quaternion.Euler(targetCharacterDirection);
 
             // Get raw mouse input for a cleaner reading on more sensitive mice.
             Vector2 mouseDelta;
-#if UNITY_SWITCH// && !UNITY_EDITOR
+#if UNITY_SWITCH // && !UNITY_EDITOR
             if (NintendoInput.isEditorInputActiv)
             {
-
                 mouseDelta = new Vector2(NintendoInput.InputNpadAxis(NintendoInput.NpadAxis.RightHorizontal),
                     NintendoInput.InputNpadAxis(NintendoInput.NpadAxis.RightVertical));
             }
             else
-            {
                 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-            }
 #else
             var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 #endif
 
             // Scale input against the sensitivity setting and multiply that against the smoothing value.
-            mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));
+            mouseDelta = Vector2.Scale(mouseDelta,
+                new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));
 
             // Interpolate mouse movement over time to apply smoothing delta.
             // _smoothMouse.x = Mathf.Lerp(_smoothMouse.x, mouseDelta.x, 1f / smoothing.x);
@@ -64,7 +59,6 @@ namespace SBPScripts
                 targetDirection = transform.localRotation.eulerAngles;
                 _mouseAbsolute = new Vector2(0, 0);
                 movement = false;
-
             }
             else
             {
@@ -77,13 +71,12 @@ namespace SBPScripts
                 if (clampInDegrees.y < 360)
                     _mouseAbsolute.y = Mathf.Clamp(_mouseAbsolute.y, -clampInDegrees.y * 0.5f, clampInDegrees.y * 0.5f);
 
-                transform.localRotation = Quaternion.AngleAxis(-_mouseAbsolute.y, targetOrientation * Vector3.right) * targetOrientation;
-
+                transform.localRotation = Quaternion.AngleAxis(-_mouseAbsolute.y, targetOrientation * Vector3.right) *
+                                          targetOrientation;
 
 
                 var yRotation = Quaternion.AngleAxis(_mouseAbsolute.x, transform.InverseTransformDirection(Vector3.up));
                 transform.localRotation *= yRotation;
-
             }
         }
     }
