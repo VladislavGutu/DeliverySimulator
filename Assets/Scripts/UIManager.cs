@@ -35,6 +35,7 @@ namespace SBPScripts
         {
             if(_isPause)
                 return;
+#if UNITY_SWITCH
             if (NintendoInput.InputNpadButtonDown(NpadButton.Plus))
             {
                 _isPause = true;
@@ -42,7 +43,7 @@ namespace SBPScripts
                 pausePanel.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(selectBTmenu.gameObject);
             }
-                
+#endif
             if (missionPanel.activeInHierarchy)
                 if (EventSystem.current.currentSelectedGameObject == null)
                     if (missionContent.transform.childCount > 0)
@@ -62,6 +63,7 @@ namespace SBPScripts
 
 
             _staminaSlider.value = bicycleController._staminaCurrentAmount;
+#if UNITY_SWITCH
             if (NintendoInput.InputNpadButtonDown(NpadButton.Minus))
             {
                 if (missionPanel.activeInHierarchy)
@@ -74,6 +76,7 @@ namespace SBPScripts
                     missionPanel.SetActive(true);
                 }
             }
+#endif
         }
 
         public void Resume()
