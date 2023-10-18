@@ -12,7 +12,7 @@ namespace SBPScripts
     public class CyclistAnimController : MonoBehaviour
     {
         public List<Material> _materialList;
-        public List<Material> _bikeMaterial;
+        public List<MeshRenderer> _bikeMaterial;
         
         BicycleController bicycleController;
         Animator anim;
@@ -32,27 +32,21 @@ namespace SBPScripts
         public GameObject externalCharacter;
         float waitTime, prevLocalPosX;
 
-
-        private void Awake()
-        {
-            Debug.LogError($"Selected bike => {PlayerPrefs.GetInt("SelectedBike")}");
-            switch (PlayerPrefs.GetInt("SelectedBike"))
-            {
-                case 0:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-            }
-
-        }
-
         void Start()
         {
-           
+
+            for (int i = 0; i < _bikeMaterial.Count; i++)
+            {
+                for (int k = 0; k < _bikeMaterial[i].materials.Length; k++)
+                {
+                    if (_bikeMaterial[i].materials[k].name.Contains("BicycleBodyMetal"))
+                    {
+                        _bikeMaterial[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].color;
+                        _bikeMaterial[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].mainTexture;
+                    }
+                }
+            }
+            
             bicycleController = FindObjectOfType<BicycleController>();
             bicycleStatus = FindObjectOfType<BicycleStatus>();
             rig = hipIK.transform.parent.gameObject.GetComponent<Rig>();
