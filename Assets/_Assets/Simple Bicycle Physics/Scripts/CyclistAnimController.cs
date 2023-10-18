@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 #if UNITY_SWITCH
 using nn.hid;
 #endif
@@ -9,6 +11,9 @@ namespace SBPScripts
 {
     public class CyclistAnimController : MonoBehaviour
     {
+        public List<Material> _materialList;
+        public List<Material> _bikeMaterial;
+        
         BicycleController bicycleController;
         Animator anim;
         string clipInfoCurrent, clipInfoLast;
@@ -16,6 +21,7 @@ namespace SBPScripts
         [HideInInspector] public bool isAirborne;
 
         public GameObject hipIK, chestIK, leftFootIK, leftFootIdleIK, headIK;
+        
         BicycleStatus bicycleStatus;
         Rig rig;
         bool onOffBike;
@@ -26,8 +32,27 @@ namespace SBPScripts
         public GameObject externalCharacter;
         float waitTime, prevLocalPosX;
 
+
+        private void Awake()
+        {
+            Debug.LogError($"Selected bike => {PlayerPrefs.GetInt("SelectedBike")}");
+            switch (PlayerPrefs.GetInt("SelectedBike"))
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
+
+        }
+
         void Start()
         {
+           
             bicycleController = FindObjectOfType<BicycleController>();
             bicycleStatus = FindObjectOfType<BicycleStatus>();
             rig = hipIK.transform.parent.gameObject.GetComponent<Rig>();
