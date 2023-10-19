@@ -7,14 +7,14 @@ public class BikeShop : MonoBehaviour
 {
     public int _currentMaterial;
     public int _selectedMaterial;
-    
+
     public GameObject _buyMaterialBtn;
     public GameObject _selectMaterialBtn;
 
     public Text _priceText;
-    
+
     public int _materialPrice = 300;
-    
+
     public List<Material> _materialList;
     public MeshRenderer[] _bodyMaterials;
 
@@ -26,12 +26,14 @@ public class BikeShop : MonoBehaviour
             {
                 if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
                 {
-                    _bodyMaterials[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].color;
-                    _bodyMaterials[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].mainTexture;
+                    _bodyMaterials[i].materials[k].color =
+                        _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].color;
+                    _bodyMaterials[i].materials[k].mainTexture =
+                        _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].mainTexture;
                 }
             }
         }
-        
+
         ChangeBtnInShop();
     }
 
@@ -43,7 +45,7 @@ public class BikeShop : MonoBehaviour
             _currentMaterial++;
 
         ChangeMaterials();
-        
+
         ChangeBtnInShop();
     }
 
@@ -55,7 +57,7 @@ public class BikeShop : MonoBehaviour
             _currentMaterial--;
 
         ChangeMaterials();
-        
+
         ChangeBtnInShop();
     }
 
@@ -73,12 +75,21 @@ public class BikeShop : MonoBehaviour
             }
         }
     }
+
     public void BuyBike()
     {
-        PlayerPrefs.SetInt(_materialList[_currentMaterial].name, _currentMaterial);
-        _selectedMaterial = _currentMaterial;
-        SelectBike();
-        ChangeBtnInShop();
+        ChekMoney();
+        if (SaveManager.instance.saveData.money >= _materialPrice)
+        {
+            PlayerPrefs.SetInt(_materialList[_currentMaterial].name, _currentMaterial);
+            _selectedMaterial = _currentMaterial;
+            SelectBike();
+            ChangeBtnInShop();
+        }
+        else
+        {
+            Debug.LogError("Not Money");
+        }
     }
 
     public void SelectBike()
@@ -88,13 +99,18 @@ public class BikeShop : MonoBehaviour
         MainMenu.instance._mainPanel.SetActive(true);
     }
 
+    public void ChekMoney()
+    {
+        int _price = 300;
+
+        _materialPrice = _price * _currentMaterial;
+
+    }
+    
     public void ChangeBtnInShop()
     {
         Debug.LogError($"material price ====> {_materialPrice} || currentmaterial ====> {_currentMaterial}");
-        
-        int _price = 300;
-        
-        _materialPrice = _price * _currentMaterial;
+
 
         if (PlayerPrefs.GetInt(_materialList[_currentMaterial].name, 0) == _currentMaterial)
         {
@@ -107,7 +123,6 @@ public class BikeShop : MonoBehaviour
             _selectMaterialBtn.SetActive(false);
             _priceText.text = "$ " + _materialPrice;
         }
-        
     }
 
     private void OnDisable()

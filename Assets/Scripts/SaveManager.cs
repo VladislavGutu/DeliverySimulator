@@ -15,22 +15,31 @@ public class SaveManager : MonoBehaviour
     {
         GameObject temp = new GameObject("SaveManager");
         temp.AddComponent<SaveManager>();
+        DontDestroyOnLoad(temp);
     } 
         
     private void Awake()
     {
         instance = this;
-        saveData = LoadData();
+        LoadData();
     }
 
     public void SaveData()
     {
-        throw new NotImplementedException();
+        PlayerPrefs.SetInt("Money", saveData.money);
+        for (int i = 0; i < saveData.rating.Length; i++)
+        {
+            PlayerPrefs.SetInt($"Rating{i}",saveData.rating[i]);
+        }
     }
 
-    public SaveData LoadData()
+    public void LoadData()
     {
-        throw new NotImplementedException();
+        saveData.money = PlayerPrefs.GetInt("Money", 0);
+        for (int i = 0; i < saveData.rating.Length; i++)
+        {
+            saveData.rating[i] = PlayerPrefs.GetInt($"Rating{i}");
+        }
     }
 
 }

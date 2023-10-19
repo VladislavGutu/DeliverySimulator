@@ -210,6 +210,20 @@ public class MissionManager : MonoBehaviour
     
     public void MissionComplet(bool isFail)
     {
+        if (isFail)
+        {
+            Debug.LogError($"Mission Fail");
+            SaveManager.instance.saveData.rating[0] += 1;
+            SaveManager.instance.saveData.money -= currentDisplayMission.GetComponent<OrdersSetInfo>()._price / 2;
+            
+        }
+        else
+        {
+            Debug.LogError($"Mission Compete -> {_stars} Stars");
+            SaveManager.instance.saveData.rating[_stars] += 1;
+            SaveManager.instance.saveData.money += currentDisplayMission.GetComponent<OrdersSetInfo>()._price;
+        }
+        
         _distaceToTheHouse.gameObject.SetActive(false);
         Destroy(CurrentMission);
         Destroy(currentDisplayMission);
@@ -217,20 +231,9 @@ public class MissionManager : MonoBehaviour
         StartCoroutine(MissionAddTimer());
         ShowPopapEnterExit(false);
         
-        if (isFail)
-        {
-            Debug.LogError($"Mission Fail");
-            SaveManager.instance.saveData.rating[0] += 1;
-        }
-        else
-        {
-            Debug.LogError($"Mission Compete -> {_stars} Stars");
-            SaveManager.instance.saveData.rating[_stars] += 1;
-        }
-
         _stars = 5;
-
         CheckRating();
+        SaveManager.instance.SaveData();
     }
 
     private void RemoveListUpdate()
