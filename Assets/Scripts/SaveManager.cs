@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
     {
         instance = this;
         LoadData();
+        Debug.LogError(saveData.money);
     }
 
     public void SaveData()
@@ -46,7 +47,7 @@ public class SaveManager : MonoBehaviour
 
 public class SaveData
 {
-    public int money = 2000;
+    public int money = 0;
     public float averagRating = 0;
     public int[] rating = new int[6]{0,0,0,0,0,0};
 }

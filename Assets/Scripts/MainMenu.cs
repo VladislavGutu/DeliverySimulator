@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        BikeShop.instance.ChangeMaterials();
     }
 
     public void OpenShopPanel()
@@ -30,6 +31,8 @@ public class MainMenu : MonoBehaviour
     {
         _shopPanel.SetActive(false);
         _mainPanel.SetActive(true);
+        BikeShop.instance.RevertMaterial();
+
     }
     
     public void StartGame()

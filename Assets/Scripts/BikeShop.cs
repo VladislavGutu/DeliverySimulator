@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BikeShop : MonoBehaviour
 {
+    public static BikeShop instance;
+    
     public int _currentMaterial;
     public int _selectedMaterial;
 
@@ -37,6 +39,11 @@ public class BikeShop : MonoBehaviour
         ChangeBtnInShop();
     }
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void NextBike()
     {
         if (_currentMaterial >= _materialList.Count - 1)
@@ -61,7 +68,7 @@ public class BikeShop : MonoBehaviour
         ChangeBtnInShop();
     }
 
-    private void ChangeMaterials()
+    public void ChangeMaterials()
     {
         for (int i = 0; i < _bodyMaterials.Length; i++)
         {
@@ -78,8 +85,8 @@ public class BikeShop : MonoBehaviour
 
     public void BuyBike()
     {
-        ChekMoney();
-        if (SaveManager.instance.saveData.money >= _materialPrice)
+        
+        if (SaveManager.instance.saveData.money >= ChekMoney())
         {
             PlayerPrefs.SetInt(_materialList[_currentMaterial].name, _currentMaterial);
             _selectedMaterial = _currentMaterial;
@@ -99,19 +106,23 @@ public class BikeShop : MonoBehaviour
         MainMenu.instance._mainPanel.SetActive(true);
     }
 
-    public void ChekMoney()
+    public int ChekMoney()
     {
+
         int _price = 300;
 
-        _materialPrice = _price * _currentMaterial;
-
+        return _price * _currentMaterial;
+        
     }
     
     public void ChangeBtnInShop()
     {
         Debug.LogError($"material price ====> {_materialPrice} || currentmaterial ====> {_currentMaterial}");
+        
+        
 
-
+        _materialPrice =ChekMoney();
+        
         if (PlayerPrefs.GetInt(_materialList[_currentMaterial].name, 0) == _currentMaterial)
         {
             _buyMaterialBtn.SetActive(false);
@@ -125,8 +136,18 @@ public class BikeShop : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public void RevertMaterial()
     {
-        _currentMaterial = PlayerPrefs.GetInt(_materialList[_currentMaterial].name, 0);
+        for (int i = 0; i < _bodyMaterials.Length; i++)
+        {
+            for (int k = 0; k < _bodyMaterials[i].materials.Length; k++)
+            {
+                if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
+                {
+                    _bodyMaterials[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].color;
+                    _bodyMaterials[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].mainTexture;
+                }
+            }
+        }
     }
 }
