@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681523642421444
 GameObject:
@@ -60,7 +60,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751085901357432
 GameObject:
@@ -190,7 +190,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: -1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &6314492837627046576
 WheelCollider:
@@ -252,7 +252,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: -1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &879627922479578010
 WheelCollider:
@@ -932,7 +932,7 @@ Transform:
   - {fileID: 1525158444338957044}
   - {fileID: 1527999620671181659}
   m_Father: {fileID: 1528247055917485389}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
 --- !u!1 &1530403580431249269
 GameObject:
@@ -1725,6 +1725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527978958599241698}
+  - component: {fileID: 2523445060898267598}
   m_Layer: 9
   m_Name: ECitaro
   m_TagString: Player
@@ -1747,8 +1748,21 @@ Transform:
   - {fileID: 1528262467047041402}
   - {fileID: 1525424746887837688}
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.282544, y: -8.2598256e-10, z: 0.000000080037005}
+--- !u!65 &2523445060898267598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530489544317636177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 3, z: 12.36}
+  m_Center: {x: 0, y: 1.87, z: -0.1}
 --- !u!1 &1530494863378954959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,7 +3315,7 @@ Transform:
   - {fileID: 7509451660444378204}
   - {fileID: 1527894869828723885}
   m_Father: {fileID: 1527978958599241698}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
 --- !u!1 &1530886373191339076
 GameObject:
@@ -3539,7 +3553,7 @@ Transform:
   - {fileID: 1525417098596948750}
   - {fileID: 1528123451368452457}
   m_Father: {fileID: 1527978958599241698}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
 --- !u!1 &1530917021367177307
 GameObject:
@@ -4322,7 +4336,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: -1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &4906344042577894387
 WheelCollider:
@@ -4896,7 +4910,7 @@ Transform:
   - {fileID: 7509451660519916720}
   - {fileID: 7509451660866959668}
   m_Father: {fileID: 1528262467047041402}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7509451660519916721
 GameObject:
@@ -5689,7 +5703,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4114445950253038}
-  m_RootOrder: -1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &1039765648078229616
 WheelCollider:
