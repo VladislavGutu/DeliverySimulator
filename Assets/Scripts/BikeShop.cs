@@ -18,23 +18,12 @@ public class BikeShop : MonoBehaviour
     public int _materialPrice = 300;
 
     public List<Material> _materialList;
+    
     public MeshRenderer[] _bodyMaterials;
 
     private void OnEnable()
     {
-        for (int i = 0; i < _bodyMaterials.Length; i++)
-        {
-            for (int k = 0; k < _bodyMaterials[i].materials.Length; k++)
-            {
-                if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
-                {
-                    _bodyMaterials[i].materials[k].color =
-                        _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].color;
-                    _bodyMaterials[i].materials[k].mainTexture =
-                        _materialList[PlayerPrefs.GetInt("SelectedMaterial", _selectedMaterial)].mainTexture;
-                }
-            }
-        }
+        LoadBikeMaterial();
 
         ChangeBtnInShop();
     }
@@ -42,6 +31,12 @@ public class BikeShop : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+    }
+
+    private void Start()
+    {
+        LoadBikeMaterial();
     }
 
     public void NextBike()
@@ -85,11 +80,9 @@ public class BikeShop : MonoBehaviour
 
     public void BuyBike()
     {
-        
         if (SaveManager.instance.saveData.money >= ChekMoney())
         {
-            PlayerPrefs.SetInt(_materialList[_currentMaterial].name, _currentMaterial);
-            _selectedMaterial = _currentMaterial;
+            PlayerPrefs.SetInt(_materialList[_currentMaterial].name, 1);
             SelectBike();
             ChangeBtnInShop();
         }
@@ -101,7 +94,8 @@ public class BikeShop : MonoBehaviour
 
     public void SelectBike()
     {
-        PlayerPrefs.SetInt("SelectedMaterial", _selectedMaterial);
+        PlayerPrefs.SetInt(_materialList[_currentMaterial].name, 1);
+        PlayerPrefs.SetInt("SelectedMaterial", _currentMaterial);
         MainMenu.instance._shopPanel.SetActive(false);
         MainMenu.instance._mainPanel.SetActive(true);
     }
@@ -114,16 +108,31 @@ public class BikeShop : MonoBehaviour
         return _price * _currentMaterial;
         
     }
+
+    public void LoadBikeMaterial()
+    {
+        for (int i = 0; i < _bodyMaterials.Length; i++)
+        {
+            for (int k = 0; k < _bodyMaterials[i].materials.Length; k++)
+            {
+                if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
+                {
+                    _bodyMaterials[i].materials[k].color =
+                        _materialList[PlayerPrefs.GetInt("SelectedMaterial" ,0)].color;
+                    _bodyMaterials[i].materials[k].mainTexture =
+                        _materialList[PlayerPrefs.GetInt("SelectedMaterial", 0)].mainTexture;
+                }
+            }
+        }
+    }
     
     public void ChangeBtnInShop()
     {
         Debug.LogError($"material price ====> {_materialPrice} || currentmaterial ====> {_currentMaterial}");
         
+        _materialPrice = ChekMoney();
         
-
-        _materialPrice =ChekMoney();
-        
-        if (PlayerPrefs.GetInt(_materialList[_currentMaterial].name, 0) == _currentMaterial)
+        if (PlayerPrefs.GetInt(_materialList[_currentMaterial].name, 0) == 1)
         {
             _buyMaterialBtn.SetActive(false);
             _selectMaterialBtn.SetActive(true);
@@ -144,8 +153,8 @@ public class BikeShop : MonoBehaviour
             {
                 if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
                 {
-                    _bodyMaterials[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].color;
-                    _bodyMaterials[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].mainTexture;
+                    _bodyMaterials[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial",0)].color;
+                    _bodyMaterials[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial",0)].mainTexture;
                 }
             }
         }

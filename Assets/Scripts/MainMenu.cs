@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         BikeShop.instance.ChangeMaterials();
+        PlayerVisual.instance.ChangeMaterialsAtStart();
     }
 
     public void OpenShopPanel()

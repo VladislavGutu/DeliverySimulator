@@ -13,7 +13,7 @@ namespace SBPScripts
     {
         public List<Material> _materialList;
         public List<MeshRenderer> _bikeMaterial;
-        
+
         BicycleController bicycleController;
         Animator anim;
         string clipInfoCurrent, clipInfoLast;
@@ -31,7 +31,13 @@ namespace SBPScripts
 
         public GameObject externalCharacter;
         float waitTime, prevLocalPosX;
-
+        
+        public List<Material> _bodyMaterialList;
+        public List<Material> _helmetMaterialList;
+        
+        public SkinnedMeshRenderer _bodyMesh;
+        public SkinnedMeshRenderer _helmetMesh;
+        
         void Start()
         {
 
@@ -45,6 +51,12 @@ namespace SBPScripts
                         _bikeMaterial[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial")].mainTexture;
                     }
                 }
+            }
+            
+            for (int i = 0; i < _bodyMaterialList.Count; i++)
+            {
+                _bodyMesh.material.mainTexture = _bodyMaterialList[PlayerPrefs.GetInt("SelectedBodyMaterial",0)].mainTexture;
+                _helmetMesh.materials[0].mainTexture = _helmetMaterialList[PlayerPrefs.GetInt("SelectedBodyMaterial", 0)].mainTexture;
             }
             
             bicycleController = FindObjectOfType<BicycleController>();

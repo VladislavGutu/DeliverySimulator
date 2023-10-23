@@ -21,13 +21,14 @@ public class SaveManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        LoadData();
+        LoadData();        
+      
         Debug.LogError(saveData.money);
     }
 
     public void SaveData()
     {
-        PlayerPrefs.SetInt("Money", saveData.money);
+
         for (int i = 0; i < saveData.rating.Length; i++)
         {
             PlayerPrefs.SetInt($"Rating{i}",saveData.rating[i]);
@@ -36,7 +37,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadData()
     {
-        saveData.money = PlayerPrefs.GetInt("Money", 0);
+        saveData.money = PlayerPrefs.GetInt("Money", 999999);
         for (int i = 0; i < saveData.rating.Length; i++)
         {
             saveData.rating[i] = PlayerPrefs.GetInt($"Rating{i}");
@@ -46,8 +47,9 @@ public class SaveManager : MonoBehaviour
 }
 
 public class SaveData
+
 {
-    public int money = 0;
+    public int money = 99999;
     public float averagRating = 0;
     public int[] rating = new int[6]{0,0,0,0,0,0};
 }

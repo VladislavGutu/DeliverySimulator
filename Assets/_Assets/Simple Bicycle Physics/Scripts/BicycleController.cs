@@ -160,9 +160,6 @@ namespace SBPScripts
 
         public PhotonView _photonView;
 
-        public List<Material> _materialList;
-        public MeshRenderer[] _bodyMaterials;
-        
         void Awake()
         {
             // _photonView = GetComponent<PhotonView>();
@@ -175,17 +172,6 @@ namespace SBPScripts
             // if (_photonView.IsMine)
             // {
             
-            // for (int i = 0; i < _bodyMaterials.Length; i++)
-            // {
-            //     for (int k = 0; k < _bodyMaterials[i].materials.Length; k++)
-            //     {
-            //         if (_bodyMaterials[i].materials[k].name.Contains("BicycleBodyMetal"))
-            //         {
-            //             _bodyMaterials[i].materials[k].color = _materialList[PlayerPrefs.GetInt("SelectedMaterial", 0)].color;
-            //             _bodyMaterials[i].materials[k].mainTexture = _materialList[PlayerPrefs.GetInt("SelectedMaterial", 0)].mainTexture;
-            //         }
-            //     }
-            // }
             
             rb = GetComponent<Rigidbody>();
             rb.maxAngularVelocity = Mathf.Infinity;

@@ -6,14 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Materials/DrinkLid_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Materials/DrinkLid_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_Soap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_Soap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_SoapLabel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_SoapLabel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BikeShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BikeShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/TurnTheGameOn/SimpleTrafficSystem/Integration/StylizedVehiclePack.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/door glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/door glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Models/MtbBiker3Mat/Outfit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Models/MtbBiker3Mat/Outfit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/CreateAndJoinRooms.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PhotonScripts/SpawnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RorationScripts/RotateIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingUpRestaurant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" root0="FORCE_HIGHLIGHTING" />
@@ -79,24 +88,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/vladislavgutu/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/vladislavgutu/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/DeliveryBuild/build.app/Contents/MacOS/BMX" />
@@ -195,6 +205,9 @@
       <workItem from="1697649674467" duration="2441000" />
       <workItem from="1697696382345" duration="4859000" />
       <workItem from="1697715196213" duration="2592000" />
+      <workItem from="1697837568925" duration="854000" />
+      <workItem from="1697840468405" duration="4778000" />
+      <workItem from="1698085058931" duration="4070000" />
     </task>
     <servers />
   </component>
