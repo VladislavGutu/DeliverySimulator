@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 
@@ -8,6 +9,14 @@ public class MainMenu : MonoBehaviour
     public static MainMenu instance;
     public GameObject _shopPanel;
     public GameObject _mainPanel;
+    public GameObject _shopButtonSelected;
+    public GameObject _mainMenuButtonSelected;
+
+    private void OnEnable()
+    {
+        EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
+
+    }
 
     private void Awake()
     {
@@ -26,6 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         _shopPanel.SetActive(true);
         _mainPanel.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(_shopButtonSelected);
     }
     
     public void CloseShopPanel()
@@ -34,6 +44,7 @@ public class MainMenu : MonoBehaviour
         _mainPanel.SetActive(true);
         BikeShop.instance.RevertMaterial();
 
+        EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
     }
     
     public void StartGame()
