@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using nn.hid;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace SBPScripts
         private BicycleController bicycleController;
 
         public Button missionBTN_Open, missionBTN_Close, selectBTmenu;
-        public GameObject missionPanel, missionContent, pausePanel;
+        public GameObject missionPanel, missionContent, pausePanel, loadingPanel;
 
         private bool _isPause = false;
         void Start()
@@ -89,9 +90,15 @@ namespace SBPScripts
 
         public void MainMenu()
         {
-            Time.timeScale = 1;
-            _isPause = false;
-            SceneManager.LoadScene("MainMenu");
+            loadingPanel.SetActive(true);
+            
+            DOVirtual.DelayedCall(2f, () =>
+            {
+                Time.timeScale = 1;
+                _isPause = false;
+                SceneManager.LoadScene("MainMenu");
+            });
+            
         }
         
         public void OpenClosePanel(GameObject panel)

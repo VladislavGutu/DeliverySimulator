@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainPanel;
     public GameObject _shopButtonSelected;
     public GameObject _mainMenuButtonSelected;
+    public GameObject _loadingPanel;
 
     private void OnEnable()
     {
@@ -49,6 +51,10 @@ public class MainMenu : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("TestSceneMission");
+        _loadingPanel.SetActive(true);
+        DOVirtual.DelayedCall(2f, () =>
+        {
+            SceneManager.LoadScene("TestSceneMission");
+        });
     }
 }
