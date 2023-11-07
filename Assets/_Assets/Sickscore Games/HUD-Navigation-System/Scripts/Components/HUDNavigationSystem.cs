@@ -155,17 +155,17 @@ namespace SickscoreGames.HUDNavigationSystem
 		#region Main Methods
 		void Awake ()
 		{
-			// destroy duplicate instances
-			if (_Instance != null) {
-				Destroy (this.gameObject);
-				return;
-			}
-
-			// dont destroy on load
-			if (KeepAliveOnLoad)
-			    DontDestroyOnLoad (this.gameObject);
-
-			_Instance = this;
+			// // destroy duplicate instances
+			// if (_Instance != null) {
+			// 	Destroy (this.gameObject);
+			// 	return;
+			// }
+			//
+			// // dont destroy on load
+			// if (KeepAliveOnLoad)
+			//     DontDestroyOnLoad (this.gameObject);
+			//
+			// _Instance = this;
 		}
 
 
