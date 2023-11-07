@@ -31,6 +31,8 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         BikeShop.instance.ChangeMaterials();
         PlayerVisual.instance.ChangeMaterialsAtStart();
+        EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
+
     }
 
     public void OpenShopPanel()
