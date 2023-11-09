@@ -42,6 +42,7 @@ namespace SBPScripts
                 _isPause = true;
                 Time.timeScale = 0;
                 pausePanel.SetActive(true);
+                missionPanel.SetActive(false);
                 EventSystem.current.SetSelectedGameObject(selectBTmenu.gameObject);
             }
 #endif
