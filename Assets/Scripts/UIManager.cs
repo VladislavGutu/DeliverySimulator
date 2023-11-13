@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using nn.hid;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -20,6 +21,8 @@ namespace SBPScripts
         public Button missionBTN_Open, missionBTN_Close, selectBTmenu;
         public GameObject missionPanel, missionContent, pausePanel, loadingPanel;
 
+        public TextMeshProUGUI _textMoney;
+
         private bool _isPause = false;
         void Start()
         {
@@ -29,8 +32,16 @@ namespace SBPScripts
 
             missionBTN_Open.onClick.AddListener(() => { OpenClosePanel(missionPanel); });
             missionBTN_Close.onClick.AddListener(() => { OpenClosePanel(missionPanel); });
+            
+            UpdateMoneyText();
         }
 
+        public void UpdateMoneyText()
+        {
+            SaveManager.instance.LoadData();
+            _textMoney.text = SaveManager.instance.saveData.money.ToString();
+
+        }
         // Update is called once per frame
         void Update()
         {

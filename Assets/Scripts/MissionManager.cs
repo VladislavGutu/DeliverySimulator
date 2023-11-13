@@ -54,7 +54,6 @@ public class MissionManager : MonoBehaviour
 
         player = FindObjectOfType<CharacterController>();
         _showPopapEnterExit.SetActive(false);
-        _distaceToTheHouse.gameObject.SetActive(false);
 
         foreach (var t in _houseList)
         {
@@ -234,6 +233,7 @@ public class MissionManager : MonoBehaviour
         _stars = 5;
         CheckRating();
         SaveManager.instance.SaveData();
+        UIManager.instance.UpdateMoneyText();
     }
 
     private void RemoveListUpdate()
