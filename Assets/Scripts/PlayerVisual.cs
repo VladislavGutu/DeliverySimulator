@@ -88,8 +88,12 @@ public class PlayerVisual : MonoBehaviour
         if (SaveManager.instance.saveData.money >= price)
         {
              PlayerPrefs.SetInt(_bodyMaterialList[_currentMaterial].name, 1);
+             SaveManager.instance.saveData.money -= price;
+             SaveManager.instance.SaveData();
              SelectBike();
              ChangeBtnInShop();
+             MainMenu.instance.UpdateMoneyText();
+
         }
         else
         {
@@ -97,6 +101,11 @@ public class PlayerVisual : MonoBehaviour
         }
     }
 
+    public void SaveMoney()
+    {
+        
+    }
+    
     public void SelectBike()
     {
         PlayerPrefs.SetInt(_bodyMaterialList[_currentMaterial].name, 1);

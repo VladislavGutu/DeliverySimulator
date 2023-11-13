@@ -38,6 +38,24 @@ namespace SBPScripts
         public SkinnedMeshRenderer _bodyMesh;
         public SkinnedMeshRenderer _helmetMesh;
         
+        public bool _isNearBicycle;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Bike"))
+            {
+                _isNearBicycle = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Bike"))
+            {
+                _isNearBicycle = false;
+            }
+        }
+
         void Start()
         {
 
@@ -88,7 +106,7 @@ namespace SBPScripts
                     tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.Y) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0);
+                                  0.1f && waitTime == 0 && _isNearBicycle);
                 }
                 else
                 {

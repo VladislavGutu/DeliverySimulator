@@ -1,3 +1,4 @@
+#if UNITY_SWITCH
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -103,3 +104,4 @@ public class SwitchSavePlayerPrefs : MonoBehaviour
         }
     }
 }
+#endif

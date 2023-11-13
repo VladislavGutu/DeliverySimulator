@@ -83,8 +83,13 @@ public class BikeShop : MonoBehaviour
         if (SaveManager.instance.saveData.money >= ChekMoney())
         {
             PlayerPrefs.SetInt(_materialList[_currentMaterial].name, 1);
+            SaveManager.instance.saveData.money -= _materialPrice;
+
             SelectBike();
             ChangeBtnInShop();
+            SaveManager.instance.SaveData();
+
+            MainMenu.instance.UpdateMoneyText();
         }
         else
         {
@@ -99,13 +104,13 @@ public class BikeShop : MonoBehaviour
         MainMenu.instance._shopPanel.SetActive(false);
         MainMenu.instance._mainPanel.SetActive(true);
     }
-
+    
     public int ChekMoney()
     {
 
-        int _price = 300;
+        int _materialPrice = 300;
 
-        return _price * _currentMaterial;
+        return _materialPrice * _currentMaterial;
         
     }
 

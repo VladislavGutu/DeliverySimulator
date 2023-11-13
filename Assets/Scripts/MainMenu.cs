@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -13,16 +14,23 @@ public class MainMenu : MonoBehaviour
     public GameObject _shopButtonSelected;
     public GameObject _mainMenuButtonSelected;
     public GameObject _loadingPanel;
+    public TextMeshProUGUI _textMoney;
 
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
-
+        
     }
 
     private void Awake()
     {
         instance = this;
+    }
+
+    public void UpdateMoneyText()
+    {
+        _textMoney.text = SaveManager.instance.saveData.money.ToString();
+
     }
 
     private void Start()
@@ -32,6 +40,7 @@ public class MainMenu : MonoBehaviour
         BikeShop.instance.ChangeMaterials();
         PlayerVisual.instance.ChangeMaterialsAtStart();
         EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
+        UpdateMoneyText();
 
     }
 
