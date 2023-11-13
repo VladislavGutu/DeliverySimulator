@@ -106,7 +106,7 @@ namespace SBPScripts
                     tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.Y) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0 && _isNearBicycle);
+                                  0.1f && waitTime == 0);
                 }
                 else
                 {
