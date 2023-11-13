@@ -16,36 +16,78 @@ MonoBehaviour:
   - ShopType: 2
     icon: {fileID: 21300000, guid: 29356cbccca1a4f5b95f8a65c174ebd7, type: 3}
     listshop:
-    - productName: Chicken
+    - productName: MC Chick
       productPrice: 20
-      icon: {fileID: 21300000, guid: 61bc3a2b3852b4b3cbaccd6cbcc01cdf, type: 3}
-    - productName: Colla
+      icon: {fileID: -544447888, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Lemonade
       productPrice: 30
       icon: {fileID: 21300000, guid: 4d6d7a45bac15d046bbf787a35f83b71, type: 3}
-    - productName: Burger
+    - productName: MC Burger
       productPrice: 15
       icon: {fileID: 21300000, guid: 29356cbccca1a4f5b95f8a65c174ebd7, type: 3}
-  - ShopType: 1
-    icon: {fileID: 21300000, guid: 61bc3a2b3852b4b3cbaccd6cbcc01cdf, type: 3}
-    listshop:
-    - productName: Chicken
-      productPrice: 20
-      icon: {fileID: 21300000, guid: 61bc3a2b3852b4b3cbaccd6cbcc01cdf, type: 3}
-    - productName: Pizza
-      productPrice: 100
-      icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
-    - productName: Colla
-      productPrice: 30
-      icon: {fileID: 21300000, guid: 4d6d7a45bac15d046bbf787a35f83b71, type: 3}
+    - productName: MC Nuggets
+      productPrice: 35
+      icon: {fileID: 2086820595, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: MC Flavor
+      productPrice: 60
+      icon: {fileID: -457425724, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: MC Muff
+      productPrice: 15
+      icon: {fileID: 645589496, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: MC Fry
+      productPrice: 50
+      icon: {fileID: 1470705180, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
   - ShopType: 4
     icon: {fileID: 21300000, guid: e9a27bab3ff674fa391bc1ef2a6eb6f6, type: 3}
     listshop:
     - productName: Sushi
       productPrice: 150
       icon: {fileID: 21300000, guid: e9a27bab3ff674fa391bc1ef2a6eb6f6, type: 3}
+    - productName: Japanese Snack
+      productPrice: 75
+      icon: {fileID: 1404345314, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Sushiwich
+      productPrice: 75
+      icon: {fileID: 891130902, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Japan Tako
+      productPrice: 75
+      icon: {fileID: -1466207529, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
   - ShopType: 3
     icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
     listshop:
     - productName: Pizza
       productPrice: 120
       icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
+    - productName: Lemonade
+      productPrice: 25
+      icon: {fileID: 1746403629, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Donut
+      productPrice: 120
+      icon: {fileID: 1118724806, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Icecream
+      productPrice: 35
+      icon: {fileID: -583908696, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Eggwich
+      productPrice: 55
+      icon: {fileID: -963653490, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: One Slice
+      productPrice: 25
+      icon: {fileID: 1143711779, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+  - ShopType: 1
+    icon: {fileID: 2086820595, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    listshop:
+    - productName: Pizza
+      productPrice: 80
+      icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
+    - productName: Sandwich
+      productPrice: 115
+      icon: {fileID: 850522296, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Corn Dog
+      productPrice: 35
+      icon: {fileID: 1990795719, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Lemonade
+      productPrice: 15
+      icon: {fileID: 1656792237, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}
+    - productName: Ham
+      productPrice: 15
+      icon: {fileID: 342796234, guid: 4f9ba7476328a45dda9f6f4ef142deb4, type: 3}

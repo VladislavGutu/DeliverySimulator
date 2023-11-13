@@ -100,11 +100,6 @@ public class PlayerVisual : MonoBehaviour
             Debug.LogError("Not Money");
         }
     }
-
-    public void SaveMoney()
-    {
-        
-    }
     
     public void SelectBike()
     {

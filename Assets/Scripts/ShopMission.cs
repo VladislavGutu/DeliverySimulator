@@ -38,7 +38,7 @@ public class ShopMission : MonoBehaviour
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[1];
                 icoShop = _shopSprite[1];
                 break;
-            case ShopType.KFC:
+            case ShopType.KTS:
                 _hudNavigationElement.Indicator.OffscreenIcon.sprite = _shopSprite[2];
                 _hudNavigationElement.Indicator.OnscreenIcon.sprite = _shopSprite[2];
                 icoShop = _shopSprite[2];

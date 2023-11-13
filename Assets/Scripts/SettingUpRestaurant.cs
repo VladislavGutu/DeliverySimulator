@@ -29,7 +29,7 @@ public class SettingUpRestaurant : MonoBehaviour
                 _pointMaterial.GetComponent<MeshRenderer>().material.color = _mainMesh.material.color;
                 Debug.LogError("MC SettingUpRestaurant");
                 break;
-            case ShopType.KFC:
+            case ShopType.KTS:
                 _mainMesh.material.color = Color.magenta;
                 _pointMaterial.GetComponent<MeshRenderer>().material.color = _mainMesh.material.color;
                 Debug.LogError("KFC SettingUpRestaurant");
@@ -56,7 +56,7 @@ public class SettingUpRestaurant : MonoBehaviour
                     Debug.LogError("MC Scene");
                     //SceneManager.LoadScene("MC");
                     break;
-                case ShopType.KFC:
+                case ShopType.KTS:
                     Debug.LogError("KFC Scene");
                     //SceneManager.LoadScene("KFC");
                     break;

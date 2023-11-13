@@ -11,6 +11,15 @@ TagManager:
   - Synty Medium Farm
   - Synty Small Farm
   - CinemachineTarget
+  - Car
+  - Stop
+  - caliper
+  - diskRim
+  - Marcador
+  - Blocks
+  - AnimationToFollow
+  - TrackedLimb
+  - Bike
   layers:
   - Default
   - TransparentFX
