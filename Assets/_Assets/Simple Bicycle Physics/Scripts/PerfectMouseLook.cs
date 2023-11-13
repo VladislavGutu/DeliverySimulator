@@ -30,7 +30,7 @@ namespace SBPScripts
 
             // Get raw mouse input for a cleaner reading on more sensitive mice.
             Vector2 mouseDelta;
-#if UNITY_SWITCH // && !UNITY_EDITOR
+#if UNITY_SWITCH
             if (NintendoInput.isEditorInputActiv)
             {
                 mouseDelta = new Vector2(NintendoInput.InputNpadAxis(NintendoInput.NpadAxis.RightHorizontal),

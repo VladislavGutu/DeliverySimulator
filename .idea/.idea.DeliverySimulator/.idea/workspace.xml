@@ -7,8 +7,18 @@
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopProduct.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mission/ShopProduct.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Player/Player/CharacterControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Map/Fantastic City Generator/Player/Player/CharacterControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/PerfectMouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/PerfectMouseLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,9 +103,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/vladislavgutu/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
-      &quot;/Users/vladislavgutu/.local/share/Symbols/src&quot;
+      &quot;C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\admin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -109,7 +119,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity 2021.3.29f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -117,7 +127,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity 2021.3.29f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\GitHub_D\DeliverySimulator -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\GitHub_D\DeliverySimulator" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -204,6 +214,9 @@
       <workItem from="1698823672560" duration="971000" />
       <workItem from="1699008094208" duration="2959000" />
       <workItem from="1699267184801" duration="1663000" />
+      <workItem from="1699445557235" duration="605000" />
+      <workItem from="1699610132119" duration="4932000" />
+      <workItem from="1699860778481" duration="6371000" />
     </task>
     <servers />
   </component>

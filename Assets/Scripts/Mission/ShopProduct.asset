@@ -37,9 +37,15 @@ MonoBehaviour:
     - productName: Colla
       productPrice: 30
       icon: {fileID: 21300000, guid: 4d6d7a45bac15d046bbf787a35f83b71, type: 3}
-  - ShopType: 2
-    icon: {fileID: 0}
-    listshop: []
+  - ShopType: 4
+    icon: {fileID: 21300000, guid: e9a27bab3ff674fa391bc1ef2a6eb6f6, type: 3}
+    listshop:
+    - productName: Sushi
+      productPrice: 150
+      icon: {fileID: 21300000, guid: e9a27bab3ff674fa391bc1ef2a6eb6f6, type: 3}
   - ShopType: 3
-    icon: {fileID: 0}
-    listshop: []
+    icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
+    listshop:
+    - productName: Pizza
+      productPrice: 120
+      icon: {fileID: 21300000, guid: 284cb6c7d1ca44cf6a5e9564ddc83e73, type: 3}
