@@ -90,8 +90,8 @@ public class MissionManager : MonoBehaviour
             }
         }
 
-        if (!_isShop && actualHouse != null)
-            _distaceToTheHouse.text = Vector3.Distance(player.transform.position,actualHouse.transform.position).ToString();
+        // if (!_isShop && actualHouse != null)
+        //     _distaceToTheHouse.text = Vector3.Distance(player.transform.position,actualHouse.transform.position).ToString();
     }
 
     IEnumerator MissionAddTimer()
@@ -145,9 +145,9 @@ public class MissionManager : MonoBehaviour
 
         ShowPopapEnterExit(false);
         actualHouse.SetActive(true);
-        _distaceToTheHouse.gameObject.SetActive(true);
+        //_distaceToTheHouse.gameObject.SetActive(true);
         float tempDistance = Vector3.Distance(actualShop.transform.position, actualHouse.transform.position);
-        _distaceToTheHouse.text = tempDistance.ToString();
+        //_distaceToTheHouse.text = tempDistance.ToString();
         currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(tempDistance / 1.5f);
     }
 
@@ -223,7 +223,7 @@ public class MissionManager : MonoBehaviour
             SaveManager.instance.saveData.money += currentDisplayMission.GetComponent<OrdersSetInfo>()._price;
         }
         
-        _distaceToTheHouse.gameObject.SetActive(false);
+        //.gameObject.SetActive(false);
         Destroy(CurrentMission);
         Destroy(currentDisplayMission);
         RemoveListUpdate();
