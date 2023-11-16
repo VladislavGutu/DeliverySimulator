@@ -39,9 +39,14 @@ namespace SBPScripts
         public SkinnedMeshRenderer _helmetMesh;
         
         public bool _isNearBicycle;
+        public bool _isEnterBicycle = true;
 
         private void OnTriggerEnter(Collider other)
         {
+            if(other.CompareTag("Player"))
+            {
+                _isEnterBicycle = true;
+            }
             if (other.CompareTag("Bike"))
             {
                 _isNearBicycle = true;
@@ -50,6 +55,10 @@ namespace SBPScripts
 
         private void OnTriggerExit(Collider other)
         {
+            if(other.CompareTag("Player"))
+            {
+                _isEnterBicycle = false;
+            }
             if (other.CompareTag("Bike"))
             {
                 _isNearBicycle = false;
@@ -58,7 +67,7 @@ namespace SBPScripts
 
         void Start()
         {
-
+            _isEnterBicycle = true;
             for (int i = 0; i < _bikeMaterial.Count; i++)
             {
                 for (int k = 0; k < _bikeMaterial[i].materials.Length; k++)
@@ -106,21 +115,21 @@ namespace SBPScripts
                     tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.Y) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0);
+                                  0.1f && waitTime == 0 && _isEnterBicycle);
                 }
                 else
                 {
                     tempAction = (Input.GetKeyDown(KeyCode.Return) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0);
+                                  0.1f && waitTime == 0 && _isEnterBicycle);
                 }
 
                 if (tempAction)
 #else
                 if (Input.GetKeyDown(KeyCode.Return) &&
                     bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity).z <=
-                    0.1f && waitTime == 0)
+                    0.1f && waitTime == 0 && _isEnterBicycle)
 #endif
                 {
                     waitTime = 1.5f;
@@ -281,5 +290,6 @@ namespace SBPScripts
                     externalCharacter.transform.rotation.eulerAngles.z);
             }
         }
+        
     }
 }

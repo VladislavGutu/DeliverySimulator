@@ -24,30 +24,24 @@ public class MissionManager : MonoBehaviour
 
     public ShopProduct shopProduct;
 
-    [Space, SerializeField]
-    private Transform _contentSpawnMission;
+    [Space, SerializeField] private Transform _contentSpawnMission;
 
-    [SerializeField]
-    private GameObject _prefabMission;
-    
-    [SerializeField]
-    private float intervalAparition, maximumOrderList;
+    [SerializeField] private GameObject _prefabMission;
 
-    [SerializeField]
-    private List<GameObject> _listMission;
-    [SerializeField]
-    private List<OrdersSetInfo> _listMissionOrders;
+    [SerializeField] private float intervalAparition, maximumOrderList;
+
+    [SerializeField] private List<GameObject> _listMission;
+    [SerializeField] private List<OrdersSetInfo> _listMissionOrders;
 
     public GameObject CurrentMission, currentDisplayMission;
-    [SerializeField]
-    private GameObject _displayCurMissionContent, _displayCurMissionPrefab, _showPopapEnterExit;
-    [SerializeField]
-    private TextMeshProUGUI _distaceToTheHouse;
+    [SerializeField] private GameObject _displayCurMissionContent, _displayCurMissionPrefab, _showPopapEnterExit;
+    [SerializeField] private TextMeshProUGUI _distaceToTheHouse;
 
     [SerializeField] private Image displayRating;
 
     private int _stars = 5;
     private bool _isShop = false;
+
     private void Awake()
     {
         instance = this;
@@ -59,6 +53,7 @@ public class MissionManager : MonoBehaviour
         {
             t.SetActive(false);
         }
+
         Invoke(nameof(AddMission), 1.5f);
         // AddMission();
         StartCoroutine(MissionAddTimer());
@@ -85,7 +80,8 @@ public class MissionManager : MonoBehaviour
                     }
 
                     _listMissionOrders[i]._timer -= Time.deltaTime;
-                    _listMissionOrders[i]._imageTimer.fillAmount = _listMissionOrders[i]._timer / _listMissionOrders[i]._maxTimer;
+                    _listMissionOrders[i]._imageTimer.fillAmount =
+                        _listMissionOrders[i]._timer / _listMissionOrders[i]._maxTimer;
                 }
             }
         }
@@ -110,7 +106,7 @@ public class MissionManager : MonoBehaviour
         {
             if (shopInteriorList[i].shopType == shopType)
             {
-                if(CurrentMission != null)
+                if (CurrentMission != null)
                     shopInteriorList[i].MissionCheck(CurrentMission.GetComponent<OrdersSetInfo>().shopTypeMission);
                 else
                     shopInteriorList[i].MissionCheck(ShopType.None);
@@ -122,7 +118,7 @@ public class MissionManager : MonoBehaviour
             }
         }
     }
-    
+
     public void ExitShop()
     {
         player.transform.position = actualShop.transform.position;
@@ -134,12 +130,13 @@ public class MissionManager : MonoBehaviour
     {
         _showPopapEnterExit.SetActive(isActiv);
     }
-    
+
     public void CommandStart()
     {
-        if(actualShop.GetComponent<ShopMission>().shopType != CurrentMission.GetComponent<OrdersSetInfo>().shopTypeMission)
+        if (actualShop.GetComponent<ShopMission>().shopType !=
+            CurrentMission.GetComponent<OrdersSetInfo>().shopTypeMission)
             return;
-        
+
         if (_houseList.Count > 0)
             actualHouse = _houseList[Random.Range(0, _houseList.Count)].transform.gameObject;
 
@@ -153,23 +150,21 @@ public class MissionManager : MonoBehaviour
 
     public void CommandStop()
     {
-        actualHouse.SetActive(false);
-        actualHouse = null;
-
         MissionComplet(false);
     }
 
     private void AddMission()
     {
-        if(_listMission.Count > 6)
+        if (_listMission.Count > 6)
             return;
-        
+
         int tempIndex = Random.Range(1, 4);
         ShopMission tempShopMission = _shopList[Random.Range(0, _shopList.Count)].GetComponent<ShopMission>();
         GameObject tempMiss = Instantiate(_prefabMission, _contentSpawnMission);
         OrdersSetInfo tempOrdersSetInfo = tempMiss.GetComponent<OrdersSetInfo>();
-                    tempOrdersSetInfo._maxTimer -= (10 * tempIndex); 
-        tempOrdersSetInfo.OrdersSetInfoShop(tempShopMission.icoShop, tempShopMission.shopType.ToString(), tempShopMission.shopType);
+        tempOrdersSetInfo._maxTimer -= (10 * tempIndex);
+        tempOrdersSetInfo.OrdersSetInfoShop(tempShopMission.icoShop, tempShopMission.shopType.ToString(),
+            tempShopMission.shopType);
 
         for (int i = 0; i <= tempIndex; i++)
         {
@@ -177,36 +172,40 @@ public class MissionManager : MonoBehaviour
             {
                 if (tempShopMission.shopType == shopProduct.shop[j].ShopType)
                 {
-                    Product tempProduct = shopProduct.shop[j].listshop[Random.Range(0,shopProduct.shop[j].listshop.Count)];
-                    tempOrdersSetInfo.OrdersSetInfoProduct(tempProduct.icon, tempProduct.productName, tempProduct.productPrice);
+                    Product tempProduct =
+                        shopProduct.shop[j].listshop[Random.Range(0, shopProduct.shop[j].listshop.Count)];
+                    tempOrdersSetInfo.OrdersSetInfoProduct(tempProduct.icon, tempProduct.productName,
+                        tempProduct.productPrice);
                     break;
                 }
             }
         }
+
         _listMission.Add(tempMiss);
         _listMissionOrders.Add(tempOrdersSetInfo);
     }
 
     public void StartMission(GameObject mission)
     {
-        if(CurrentMission != null)
+        if (CurrentMission != null)
             return;
-        
+
         CurrentMission = mission;
         GameObject tempMiss = Instantiate(_displayCurMissionPrefab, _displayCurMissionContent.transform);
         OrdersSetInfo tempmissionOrdersSetInfo = mission.GetComponent<OrdersSetInfo>();
         OrdersSetInfo tempOrdersSetInfo = tempMiss.GetComponent<OrdersSetInfo>();
-        tempOrdersSetInfo.OrdersSetInfoShop(tempmissionOrdersSetInfo._icoShop.sprite, tempmissionOrdersSetInfo._textNameShop.text, tempmissionOrdersSetInfo.shopTypeMission);
+        tempOrdersSetInfo.OrdersSetInfoShop(tempmissionOrdersSetInfo._icoShop.sprite,
+            tempmissionOrdersSetInfo._textNameShop.text, tempmissionOrdersSetInfo.shopTypeMission);
         tempOrdersSetInfo._price = tempmissionOrdersSetInfo._price;
         tempOrdersSetInfo.OrdersSetInfoProduct(tempmissionOrdersSetInfo._orders);
 
         currentDisplayMission = tempMiss;
         UIManager.instance.OpenClosePanel(UIManager.instance.missionPanel);
-        if(actualShopInterior != null)
+        if (actualShopInterior != null)
             actualShopInterior.MissionCheck(tempmissionOrdersSetInfo.shopTypeMission);
         CurrentMission.SetActive(false);
     }
-    
+
     public void MissionComplet(bool isFail)
     {
         if (isFail)
@@ -214,7 +213,6 @@ public class MissionManager : MonoBehaviour
             Debug.LogError($"Mission Fail");
             SaveManager.instance.saveData.rating[0] += 1;
             SaveManager.instance.saveData.money -= currentDisplayMission.GetComponent<OrdersSetInfo>()._price / 2;
-            
         }
         else
         {
@@ -222,14 +220,16 @@ public class MissionManager : MonoBehaviour
             SaveManager.instance.saveData.rating[_stars] += 1;
             SaveManager.instance.saveData.money += currentDisplayMission.GetComponent<OrdersSetInfo>()._price;
         }
-        
+
+        actualHouse.SetActive(false);
+        actualHouse = null;
         //.gameObject.SetActive(false);
         Destroy(CurrentMission);
         Destroy(currentDisplayMission);
         RemoveListUpdate();
         StartCoroutine(MissionAddTimer());
         ShowPopapEnterExit(false);
-        
+
         _stars = 5;
         CheckRating();
         SaveManager.instance.SaveData();
@@ -269,7 +269,7 @@ public class MissionManager : MonoBehaviour
                 break;
         }
     }
-    
+
     private void CheckRating()
     {
         int numRating = 0, numXmun = 0;
@@ -290,4 +290,5 @@ public class MissionManager : MonoBehaviour
             displayRating.fillAmount = 0;
         }
     }
+    
 }
