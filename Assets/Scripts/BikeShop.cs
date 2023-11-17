@@ -37,6 +37,7 @@ public class BikeShop : MonoBehaviour
     private void Start()
     {
         LoadBikeMaterial();
+        ChangeBtnInShop();
     }
 
     public void NextBike()

@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 public static class NintendoInput
 {
-    public static bool isEditorInputActiv = true;
+    public static bool isEditorInputActiv = false;
     
     enum NpadBTStyle
     {

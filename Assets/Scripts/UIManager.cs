@@ -7,7 +7,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Switch;
 using UnityEngine.UI;
+using Time = UnityEngine.Time;
 
 namespace SBPScripts
 {
@@ -26,6 +28,7 @@ namespace SBPScripts
         private bool _isPause = false;
         void Start()
         {
+            Debug.LogError("UIManager Start");
             instance = this;
             bicycleController = FindObjectOfType<BicycleController>();
             _staminaSlider.maxValue = bicycleController._staminaMaxAmount;
@@ -102,16 +105,17 @@ namespace SBPScripts
 
         public void MainMenu()
         {
+            Time.timeScale = 1;
             loadingPanel.SetActive(true);
-            
             DOVirtual.DelayedCall(2f, () =>
             {
                 Time.timeScale = 1;
                 _isPause = false;
                 SceneManager.LoadScene("MainMenu");
             });
-            
+
         }
+
         
         public void OpenClosePanel(GameObject panel)
         {
