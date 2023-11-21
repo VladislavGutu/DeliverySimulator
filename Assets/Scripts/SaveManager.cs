@@ -13,6 +13,7 @@ public class SaveManager : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Init()
     {
+        Debug.LogError("SaveManager Init");
         GameObject temp = new GameObject("SaveManager");
         temp.AddComponent<SaveManager>();
         DontDestroyOnLoad(temp);
@@ -40,6 +41,7 @@ public class SaveManager : MonoBehaviour
         {
             saveData.rating[i] = PlayerPrefs.GetInt($"Rating{i}");
         }
+        Debug.LogError($"SaveManager LoadData money: {saveData.money}");
     }
 
 }

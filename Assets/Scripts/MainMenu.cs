@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using nn.hid;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,7 +20,6 @@ public class MainMenu : MonoBehaviour
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
-        
     }
 
     private void Awake()
@@ -30,7 +30,6 @@ public class MainMenu : MonoBehaviour
     public void UpdateMoneyText()
     {
         _textMoney.text = SaveManager.instance.saveData.money.ToString();
-
     }
 
     private void Start()
@@ -41,7 +40,17 @@ public class MainMenu : MonoBehaviour
         PlayerVisual.instance.ChangeMaterialsAtStart();
         EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
         UpdateMoneyText();
+    }
 
+    private void Update()
+    {
+        // if (NintendoInput.InputNpadButtonDown(NpadButton.Minus) || Input.GetKeyDown(KeyCode.M))
+        // {
+        //     Debug.LogError("Plus Money");
+        //     SaveManager.instance.saveData.money += 1000;
+        //     SaveManager.instance.SaveData();
+        //     UpdateMoneyText();
+        // }
     }
 
     public void OpenShopPanel()
@@ -50,7 +59,7 @@ public class MainMenu : MonoBehaviour
         _mainPanel.SetActive(false);
         EventSystem.current.SetSelectedGameObject(_shopButtonSelected);
     }
-    
+
     public void CloseShopPanel()
     {
         _shopPanel.SetActive(false);
@@ -59,13 +68,10 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(_mainMenuButtonSelected);
     }
-    
+
     public void StartGame()
     {
         _loadingPanel.SetActive(true);
-        DOVirtual.DelayedCall(2f, () =>
-        {
-            SceneManager.LoadScene("TestSceneMission");
-        });
+        DOVirtual.DelayedCall(2f, () => { SceneManager.LoadScene("TestSceneMission"); });
     }
 }

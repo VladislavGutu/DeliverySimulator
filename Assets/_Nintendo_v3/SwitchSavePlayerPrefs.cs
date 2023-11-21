@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SwitchSavePlayerPrefs : MonoBehaviour
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     public static void Initialise()
     {
         GameObject main = new GameObject("SwitchSave_PlayerPrefs");
