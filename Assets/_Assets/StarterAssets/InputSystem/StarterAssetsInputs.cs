@@ -1,4 +1,5 @@
 using System;
+using SBPScripts;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -22,6 +23,9 @@ namespace StarterAssets
 
         private void Update()
         {
+            if(UIManager.instance.IsPause)
+                return;
+            
 #if UNITY_SWITCH
             if (NintendoInput.isEditorInputActiv)
             {

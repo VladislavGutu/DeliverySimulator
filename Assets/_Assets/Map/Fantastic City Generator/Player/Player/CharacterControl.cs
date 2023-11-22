@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using SBPScripts;
 using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
@@ -39,6 +40,9 @@ public class CharacterControl : MonoBehaviour
 
     void CameraMovement()
     {
+        if(UIManager.instance.IsPause)
+            return;
+        
 #if UNITY_SWITCH
         Vector2 md = new Vector2();
         if (NintendoInput.isEditorInputActiv)

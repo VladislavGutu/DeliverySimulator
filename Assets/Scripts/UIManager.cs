@@ -26,6 +26,12 @@ namespace SBPScripts
         public TextMeshProUGUI _textMoney;
 
         private bool _isPause = false;
+        
+        public bool IsPause
+        {
+            get => _isPause;
+        }
+        
         void Start()
         {
             Debug.LogError("UIManager Start");
