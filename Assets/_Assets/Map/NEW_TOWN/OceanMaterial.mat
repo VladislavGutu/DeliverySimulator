@@ -61,17 +61,17 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _Depth_1: -75
-    - _Displacement: 1.5
+    - _Displacement: 0.2
     - _DstBlend: 10
-    - _Main_Normal_Speed: 200
+    - _Main_Normal_Speed: 500
     - _Normal_Strength: 0.18
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Second_Normal_Speed: -100
+    - _Second_Normal_Speed: 0
     - _Smoothness: 0.408
     - _SrcBlend: 5
-    - _Strength: 2
+    - _Strength: 0.407
     - _Surface: 1
     - _Tiling: 1000
     - _WorkflowMode: 1

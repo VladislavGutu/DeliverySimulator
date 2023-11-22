@@ -29,6 +29,8 @@ public class PlayerVisual : MonoBehaviour
     {
         ChangeMaterialsAtStart();
         EventSystem.current.SetSelectedGameObject(_buyMaterialBtn);
+        ChangeBtnInShop();
+
     }
 
     private void Awake()
@@ -97,7 +99,7 @@ public class PlayerVisual : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Not Money");
+            NotifyManager.Instance.ShowMessageBox("", "YOU DON'T HAVE ENOUGH MONEY!");
         }
     }
     
@@ -107,6 +109,7 @@ public class PlayerVisual : MonoBehaviour
         PlayerPrefs.SetInt("SelectedBodyMaterial", _currentMaterial);
         MainMenu.instance._shopPanel.SetActive(false);
         MainMenu.instance._mainPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(MainMenu.instance._mainMenuButtonSelected);
     }
 
     public int ChekMoney()

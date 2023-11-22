@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class BikeShop : MonoBehaviour
@@ -94,7 +95,8 @@ public class BikeShop : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Not Money");
+            NotifyManager.Instance.ShowMessageBox("", "YOU DON'T HAVE ENOUGH MONEY!");
+
         }
     }
 
@@ -104,6 +106,8 @@ public class BikeShop : MonoBehaviour
         PlayerPrefs.SetInt("SelectedMaterial", _currentMaterial);
         MainMenu.instance._shopPanel.SetActive(false);
         MainMenu.instance._mainPanel.SetActive(true);
+        
+        EventSystem.current.SetSelectedGameObject(MainMenu.instance._mainMenuButtonSelected);
     }
     
     public int ChekMoney()
