@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using nn.hid;
 using TMPro;
@@ -72,6 +73,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         _loadingPanel.SetActive(true);
-        DOVirtual.DelayedCall(2f, () => { SceneManager.LoadScene("TestSceneMission"); });
+        DOVirtual.DelayedCall(2f, () => { SceneManager.LoadScene("TestSceneMission");});
     }
+    
 }
