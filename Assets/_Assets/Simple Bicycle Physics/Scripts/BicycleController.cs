@@ -171,8 +171,9 @@ namespace SBPScripts
         {
             // if (_photonView.IsMine)
             // {
-            
-            
+            #if UNITY_SWITCH
+            NintendoInput.isActivInput = true;
+            #endif
             rb = GetComponent<Rigidbody>();
             rb.maxAngularVelocity = Mathf.Infinity;
 

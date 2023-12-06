@@ -73,6 +73,11 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         _loadingPanel.SetActive(true);
+        
+#if UNITY_SWITCH
+        NintendoInput.isActivInput = false;
+#endif
+        
         DOVirtual.DelayedCall(2f, () => { SceneManager.LoadScene("TestSceneMission");});
     }
     
