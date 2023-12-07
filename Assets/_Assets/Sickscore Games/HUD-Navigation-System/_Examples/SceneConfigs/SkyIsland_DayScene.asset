@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be86cf9aedbab74fb51f5877ba146c2, type: 3}
   m_Name: SkyIsland_DayScene
   m_EditorClassIdentifier: 
-  overrideRadarSettings: 1
-  overrideCompassBarSettings: 1
+  overrideRadarSettings: 0
+  overrideCompassBarSettings: 0
   overrideIndicatorSettings: 1
-  overrideMinimapSettings: 1
+  overrideMinimapSettings: 0
   useRadar: 1
   radarMode: 0
   radarZoom: 1

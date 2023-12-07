@@ -183,6 +183,7 @@ namespace SickscoreGames.HUDNavigationSystem
 				}
 			}
 
+			PlayerController = FindObjectOfType<FindMy>().transform;
 			// enable the system
 			EnableSystem(isEnabled);
 

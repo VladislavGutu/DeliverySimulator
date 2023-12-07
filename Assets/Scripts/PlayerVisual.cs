@@ -107,9 +107,12 @@ public class PlayerVisual : MonoBehaviour
     {
         PlayerPrefs.SetInt(_bodyMaterialList[_currentMaterial].name, 1);
         PlayerPrefs.SetInt("SelectedBodyMaterial", _currentMaterial);
-        MainMenu.instance._shopPanel.SetActive(false);
-        MainMenu.instance._mainPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(MainMenu.instance._mainMenuButtonSelected);
+        
+        MainMenu.instance._shopPanel.SetActive(true);
+        MainMenu.instance._categoriesPanel.SetActive(true);
+        MainMenu.instance._playerMaterialPanel.SetActive(false);
+        
+        // EventSystem.current.SetSelectedGameObject(MainMenu.instance._shopButtonSelected);
     }
 
     public int ChekMoney()

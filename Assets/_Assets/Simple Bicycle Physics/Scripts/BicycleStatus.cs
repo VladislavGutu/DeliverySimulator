@@ -18,6 +18,9 @@ namespace SBPScripts
         public GameObject inactiveColliders;
         BicycleController bicycleController;
         Rigidbody rb;
+
+        public Camera _bicycleCamera;
+        public Camera _pedestrianCamera;
         
         void Start()
         {

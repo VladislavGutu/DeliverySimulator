@@ -36,7 +36,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadData()
     {
-        saveData.money = PlayerPrefs.GetInt("Money", 100);
+        saveData.money = PlayerPrefs.GetInt("Money", 999999);
         for (int i = 0; i < saveData.rating.Length; i++)
         {
             saveData.rating[i] = PlayerPrefs.GetInt($"Rating{i}");

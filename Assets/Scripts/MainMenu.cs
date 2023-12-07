@@ -15,6 +15,9 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainPanel;
     public GameObject _shopButtonSelected;
     public GameObject _mainMenuButtonSelected;
+    public GameObject _categoriesPanel;
+    public GameObject _bikeMaterialPanel;
+    public GameObject _playerMaterialPanel;
     public GameObject _loadingPanel;
     public TextMeshProUGUI _textMoney;
 

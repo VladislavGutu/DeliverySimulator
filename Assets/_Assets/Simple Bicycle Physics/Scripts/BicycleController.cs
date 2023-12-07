@@ -461,10 +461,10 @@ namespace SBPScripts
                 CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
                 CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
 
-#if UNITY_SWITCH
+#if !!UNITY_SWITCH
                 bool isSprint;
                 if (NintendoInput.isEditorInputActiv)
-                    isSprint = NintendoInput.InputNpadButton(NpadButton.L) && canSprint;
+                    isSprint = NintendoInput.InputNpadButton(NpadButton.L) && canSprint && rb.velocity.magnitude > 1;
                 else
                     isSprint = Input.GetKey(KeyCode.LeftShift) && canSprint;
                 if (isSprint)
