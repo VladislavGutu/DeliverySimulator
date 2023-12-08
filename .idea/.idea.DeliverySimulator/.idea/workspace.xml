@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/CyclistAnimController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +214,7 @@
       <workItem from="1701865135673" duration="1362000" />
       <workItem from="1701875977445" duration="630000" />
       <workItem from="1701945211875" duration="6233000" />
-      <workItem from="1702021335692" duration="315000" />
+      <workItem from="1702021335692" duration="2211000" />
     </task>
     <servers />
   </component>

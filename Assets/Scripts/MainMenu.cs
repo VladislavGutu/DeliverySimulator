@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        NintendoInput.isActivInput = true;
     }
 
     public void UpdateMoneyText()

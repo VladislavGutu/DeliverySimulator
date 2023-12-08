@@ -153,8 +153,8 @@ namespace SBPScripts
         public WayPointSystem wayPointSystem;
         public AirTimeSettings airTimeSettings;
 
-        public float _staminaCurrentAmount;
-        public float _staminaMaxAmount = 10;
+        // public float _staminaCurrentAmount;
+        // public float _staminaMaxAmount = 10;
 
         public bool canSprint = true;
 
@@ -472,10 +472,11 @@ namespace SBPScripts
                 if (Input.GetKey(KeyCode.LeftShift) && canSprint)
 #endif
                 {
-                    if (_staminaCurrentAmount > 0)
+                    StaminaManager.instance.sprint = true;
+                    if (StaminaManager.instance._staminaCurrentAmount > 0)
                     {
                         sprint = true;
-                        _staminaCurrentAmount -= Time.deltaTime;
+                        //_staminaCurrentAmount -= Time.deltaTime;
                     }
                     else
                     {
@@ -485,15 +486,16 @@ namespace SBPScripts
                 }
                 else
                 {
+                    StaminaManager.instance.sprint = false;
                     sprint = false;
 
-                    if (_staminaCurrentAmount < _staminaMaxAmount)
+                    if (StaminaManager.instance._staminaCurrentAmount < StaminaManager.instance._staminaMaxAmount)
                     {
-                        _staminaCurrentAmount += Time.deltaTime;
+                        //_staminaCurrentAmount += Time.deltaTime;
                     }
                     else
                     {
-                        _staminaCurrentAmount = _staminaMaxAmount;
+                        //_staminaCurrentAmount = _staminaMaxAmount;
                         canSprint = true;
                     }
                 }

@@ -37,7 +37,7 @@ namespace SBPScripts
             Debug.LogError("UIManager Start");
             instance = this;
             bicycleController = FindObjectOfType<BicycleController>();
-            _staminaSlider.maxValue = bicycleController._staminaMaxAmount;
+            _staminaSlider.maxValue = StaminaManager.instance._staminaMaxAmount;
 
             missionBTN_Open.onClick.AddListener(() => { OpenClosePanel(missionPanel); });
             missionBTN_Close.onClick.AddListener(() => { OpenClosePanel(missionPanel); });
@@ -84,7 +84,7 @@ namespace SBPScripts
                     }
 
 
-            _staminaSlider.value = bicycleController._staminaCurrentAmount;
+            _staminaSlider.value = StaminaManager.instance._staminaCurrentAmount;
 #if UNITY_SWITCH
             if (NintendoInput.InputNpadButtonDown(NpadButton.Minus))
             {
@@ -112,6 +112,7 @@ namespace SBPScripts
         public void MainMenu()
         {
             Time.timeScale = 1;
+            NintendoInput.isActivInput = false;
             loadingPanel.SetActive(true);
             DOVirtual.DelayedCall(2f, () =>
             {
