@@ -203,6 +203,8 @@ namespace SBPScripts
                         cyclist.SetActive(true);
                         bicycleStatus.dislodged = false;
                         bicycleStatus.onBike = true;
+                        externalCharacter.SetActive(false);
+                        cyclist.SetActive(true);
                         //
                         // cyclist.SetActive(false);
                         // externalCharacter.SetActive(true);
