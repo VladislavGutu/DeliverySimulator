@@ -7,11 +7,11 @@
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tavern Bar Interior/Material/coffee machine material 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Simple Bicycle Physics/Scripts/BicycleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/WorldShopPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/WorldShopPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,24 +83,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\admin\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\admin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/DeliveryBuild/build.app/Contents/MacOS/BMX" />
@@ -215,6 +215,7 @@
       <workItem from="1701875977445" duration="630000" />
       <workItem from="1701945211875" duration="6233000" />
       <workItem from="1702021335692" duration="2211000" />
+      <workItem from="1702657809987" duration="2897000" />
     </task>
     <servers />
   </component>

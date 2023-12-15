@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SBPScripts;
 
 public class HouseFinishDeliver : MonoBehaviour
 {
@@ -17,12 +18,25 @@ public class HouseFinishDeliver : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
             MissionManager.instance.ShowPopapEnterExit(false);
+        MissionManager.instance.ShowPopapExitBike(false);
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
         {
+            if (other.gameObject.GetComponent<BicycleStatus>() != null)
+            {
+                if (other.gameObject.GetComponent<BicycleStatus>().onBike)
+                {
+                    MissionManager.instance.ShowPopapEnterExit(false);
+                    MissionManager.instance.ShowPopapExitBike(true);
+                    return;
+                }
+            }
+
+            MissionManager.instance.ShowPopapExitBike(false);
+
 #if UNITY_SWITCH
             bool isEnterExit;
             if (NintendoInput.isEditorInputActiv)

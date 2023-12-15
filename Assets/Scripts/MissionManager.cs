@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using SBPScripts;
+using SickscoreGames.HUDNavigationSystem;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private List<OrdersSetInfo> _listMissionOrders;
 
     public GameObject CurrentMission, currentDisplayMission;
-    [SerializeField] private GameObject _displayCurMissionContent, _displayCurMissionPrefab, _showPopapEnterExit;
+    [SerializeField] private GameObject _displayCurMissionContent, _displayCurMissionPrefab, _showPopapEnterExit, _showPopapExitBike;
     [SerializeField] private TextMeshProUGUI _distaceToTheHouse;
 
     [SerializeField] private Image displayRating;
@@ -48,6 +49,7 @@ public class MissionManager : MonoBehaviour
 
         player = FindObjectOfType<CharacterController>();
         _showPopapEnterExit.SetActive(false);
+        _showPopapExitBike.SetActive(false);
 
         foreach (var t in _houseList)
         {
@@ -130,6 +132,11 @@ public class MissionManager : MonoBehaviour
     {
         _showPopapEnterExit.SetActive(isActiv);
     }
+    
+    public void ShowPopapExitBike(bool isActiv)
+    {
+        _showPopapExitBike.SetActive(isActiv);
+    }
 
     public void CommandStart()
     {
@@ -142,6 +149,7 @@ public class MissionManager : MonoBehaviour
 
         ShowPopapEnterExit(false);
         actualHouse.SetActive(true);
+        ShopNavigationOnOff(false);
         //_distaceToTheHouse.gameObject.SetActive(true);
         float tempDistance = Vector3.Distance(actualShop.transform.position, actualHouse.transform.position);
         //_distaceToTheHouse.text = tempDistance.ToString();
@@ -222,6 +230,7 @@ public class MissionManager : MonoBehaviour
         }
 
         actualHouse.SetActive(false);
+        ShopNavigationOnOff(true);
         actualHouse = null;
         //.gameObject.SetActive(false);
         Destroy(CurrentMission);
@@ -291,4 +300,13 @@ public class MissionManager : MonoBehaviour
         }
     }
     
+    private void ShopNavigationOnOff(bool isActiv)
+    {
+        for (int i = 0; i < _shopList.Count; i++)
+        {
+            _shopList[i].GetComponent<HUDNavigationElement>().enabled = isActiv;
+            if(isActiv)
+                _shopList[i].GetComponent<ShopMission>().SetShopIcon();
+        }
+    }
 }

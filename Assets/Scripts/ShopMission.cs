@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SBPScripts;
 #if UNITY_SWITCH
 using nn.hid;
 #endif
@@ -64,12 +65,25 @@ public class ShopMission : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player"))
             MissionManager.instance.ShowPopapEnterExit(false);
+        MissionManager.instance.ShowPopapExitBike(false);
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Contains("Player"))
         {
+            if (other.gameObject.GetComponent<BicycleStatus>() != null)
+            {
+                if (other.gameObject.GetComponent<BicycleStatus>().onBike)
+                {
+                    MissionManager.instance.ShowPopapEnterExit(false);
+                    MissionManager.instance.ShowPopapExitBike(true);
+                    return;
+                }
+            }
+
+            MissionManager.instance.ShowPopapExitBike(false);
+
 #if UNITY_SWITCH
             bool isEnterExit;
             if (NintendoInput.isEditorInputActiv)
