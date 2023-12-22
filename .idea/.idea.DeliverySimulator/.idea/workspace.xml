@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3797a9cf-f990-4a34-8563-f67c7ca5d639" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliverySimulator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestSceneMission.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HouseFinishDeliver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopMission.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Missions Types/WorldShopPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Missions Types/WorldShopPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Happy School SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +211,7 @@
       <workItem from="1701875977445" duration="630000" />
       <workItem from="1701945211875" duration="6233000" />
       <workItem from="1702021335692" duration="2211000" />
-      <workItem from="1702657809987" duration="2897000" />
+      <workItem from="1702657809987" duration="4077000" />
     </task>
     <servers />
   </component>

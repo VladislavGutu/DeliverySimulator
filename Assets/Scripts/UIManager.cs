@@ -25,6 +25,9 @@ namespace SBPScripts
 
         public TextMeshProUGUI _textMoney;
 
+        [Space,SerializeField]
+        private DeliveryComplet _deliveryCompletPanel;
+        
         private bool _isPause = false;
         
         public bool IsPause
@@ -35,6 +38,7 @@ namespace SBPScripts
         void Start()
         {
             Debug.LogError("UIManager Start");
+            _deliveryCompletPanel.CloseDeliveryComplet();
             instance = this;
             bicycleController = FindObjectOfType<BicycleController>();
             _staminaSlider.maxValue = StaminaManager.instance._staminaMaxAmount;
@@ -123,6 +127,10 @@ namespace SBPScripts
 
         }
 
+        public void DeliveryComplet(int stars, int money)
+        {
+            _deliveryCompletPanel.SetDeliveryComplet(stars, money);
+        }
         
         public void OpenClosePanel(GameObject panel)
         {

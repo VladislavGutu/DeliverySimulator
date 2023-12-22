@@ -35,7 +35,12 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private List<OrdersSetInfo> _listMissionOrders;
 
     public GameObject CurrentMission, currentDisplayMission;
-    [SerializeField] private GameObject _displayCurMissionContent, _displayCurMissionPrefab, _showPopapEnterExit, _showPopapExitBike;
+
+    [SerializeField] private GameObject _displayCurMissionContent,
+        _displayCurMissionPrefab,
+        _showPopapEnterExit,
+        _showPopapExitBike;
+
     [SerializeField] private TextMeshProUGUI _distaceToTheHouse;
 
     [SerializeField] private Image displayRating;
@@ -132,7 +137,7 @@ public class MissionManager : MonoBehaviour
     {
         _showPopapEnterExit.SetActive(isActiv);
     }
-    
+
     public void ShowPopapExitBike(bool isActiv)
     {
         _showPopapExitBike.SetActive(isActiv);
@@ -216,18 +221,23 @@ public class MissionManager : MonoBehaviour
 
     public void MissionComplet(bool isFail)
     {
+        int _moneyMission = 0;
         if (isFail)
         {
             Debug.LogError($"Mission Fail");
             SaveManager.instance.saveData.rating[0] += 1;
-            SaveManager.instance.saveData.money -= currentDisplayMission.GetComponent<OrdersSetInfo>()._price / 2;
+            _moneyMission = currentDisplayMission.GetComponent<OrdersSetInfo>()._price / 2;
+            SaveManager.instance.saveData.money -= _moneyMission;
         }
         else
         {
             Debug.LogError($"Mission Compete -> {_stars} Stars");
             SaveManager.instance.saveData.rating[_stars] += 1;
-            SaveManager.instance.saveData.money += currentDisplayMission.GetComponent<OrdersSetInfo>()._price;
+            _moneyMission = currentDisplayMission.GetComponent<OrdersSetInfo>()._price;
+            SaveManager.instance.saveData.money += _moneyMission;
         }
+
+        UIManager.instance.DeliveryComplet(_stars, _moneyMission);
 
         actualHouse.SetActive(false);
         ShopNavigationOnOff(true);
@@ -299,13 +309,13 @@ public class MissionManager : MonoBehaviour
             displayRating.fillAmount = 0;
         }
     }
-    
+
     private void ShopNavigationOnOff(bool isActiv)
     {
         for (int i = 0; i < _shopList.Count; i++)
         {
             _shopList[i].GetComponent<HUDNavigationElement>().enabled = isActiv;
-            if(isActiv)
+            if (isActiv)
                 _shopList[i].GetComponent<ShopMission>().SetShopIcon();
         }
     }
