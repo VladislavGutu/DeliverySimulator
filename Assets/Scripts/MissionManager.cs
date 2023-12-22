@@ -159,6 +159,7 @@ public class MissionManager : MonoBehaviour
         float tempDistance = Vector3.Distance(actualShop.transform.position, actualHouse.transform.position);
         //_distaceToTheHouse.text = tempDistance.ToString();
         currentDisplayMission.GetComponent<OrdersSetInfo>().OrderHeatStatus(tempDistance / 1.5f);
+        UIManager.instance.DeliveryStart();
     }
 
     public void CommandStop()

@@ -27,6 +27,8 @@ namespace SBPScripts
 
         [Space,SerializeField]
         private DeliveryComplet _deliveryCompletPanel;
+        [SerializeField]
+        private Animator _deliveryStartAnimator;
         
         private bool _isPause = false;
         
@@ -127,6 +129,11 @@ namespace SBPScripts
 
         }
 
+        public void DeliveryStart()
+        {
+            _deliveryStartAnimator.SetTrigger("Open");
+        }
+        
         public void DeliveryComplet(int stars, int money)
         {
             _deliveryCompletPanel.SetDeliveryComplet(stars, money);
