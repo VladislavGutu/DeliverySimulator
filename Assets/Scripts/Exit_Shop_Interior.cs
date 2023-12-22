@@ -13,27 +13,27 @@ public class Exit_Shop_Interior : MonoBehaviour
     private bool _isPlayerInTrigger;
 
 
-    private void Update()
-    {
-        if (!_isPlayerInTrigger)
-            return;
-        
-#if UNITY_SWITCH
-        bool isEnterExit;
-        if (NintendoInput.isEditorInputActiv)
-            isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
-        else
-            isEnterExit = Input.GetKeyDown(KeyCode.E);
-
-        if (isEnterExit)
-#else
-            if (Input.GetKeyDown(KeyCode.E))
-#endif
-        {
-            MissionManager.instance.ExitShop();
-        }
-
-    }
+//     private void Update()
+//     {
+//         if (!_isPlayerInTrigger)
+//             return;
+//         
+// #if UNITY_SWITCH
+//         bool isEnterExit;
+//         if (NintendoInput.isEditorInputActiv)
+//             isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+//         else
+//             isEnterExit = Input.GetKeyDown(KeyCode.E);
+//
+//         if (isEnterExit)
+// #else
+//             if (Input.GetKeyDown(KeyCode.E))
+// #endif
+//         {
+//             MissionManager.instance.ExitShop();
+//         }
+//
+//     }
 
     private void OnTriggerExit(Collider other)
     {
@@ -57,10 +57,24 @@ public class Exit_Shop_Interior : MonoBehaviour
         }
     }
 
-    // private void OnTriggerStay(Collider other)
-    // {
-    //     if (other.gameObject.tag.Contains("Player") && _exit != null && _exit.activeInHierarchy)
-    //     {
-    //     }
-    // }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag.Contains("Player") && _exit != null && _exit.activeInHierarchy)
+        {
+#if UNITY_SWITCH
+            bool isEnterExit;
+            if (NintendoInput.isEditorInputActiv)
+                isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+            else
+                isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+            if (isEnterExit)
+#else
+            if (Input.GetKeyDown(KeyCode.E))
+#endif
+            {
+                MissionManager.instance.ExitShop();
+            }
+        }
+    }
 }

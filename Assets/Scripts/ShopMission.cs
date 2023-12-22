@@ -54,27 +54,28 @@ public class ShopMission : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (!_isPlayerInTrigger)
-            return;
+//     void Update()
+//     {
+//         if (!_isPlayerInTrigger)
+//             return;
+//
+// #if UNITY_SWITCH
+//         bool isEnterExit;
+//         if (NintendoInput.isEditorInputActiv)
+//             isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+//         else
+//             isEnterExit = Input.GetKeyDown(KeyCode.E);
+//
+//         if (isEnterExit)
+// #else
+//             if (Input.GetKeyDown(KeyCode.E))
+// #endif
+//         {
+//             Debug.LogError($"<color=green> Shop Trigger Activate </color>");
+//             MissionManager.instance.EnterShop(shopType, this.gameObject);
+//         }
+//     }
 
-#if UNITY_SWITCH
-        bool isEnterExit;
-        if (NintendoInput.isEditorInputActiv)
-            isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
-        else
-            isEnterExit = Input.GetKeyDown(KeyCode.E);
-
-        if (isEnterExit)
-#else
-            if (Input.GetKeyDown(KeyCode.E))
-#endif
-        {
-            Debug.LogError($"<color=green> Shop Trigger Activate </color>");
-            MissionManager.instance.EnterShop(shopType, this.gameObject);
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Contains("Player"))
@@ -110,6 +111,22 @@ public class ShopMission : MonoBehaviour
             }
 
             MissionManager.instance.ShowPopapExitBike(false);
+            
+#if UNITY_SWITCH
+            bool isEnterExit;
+            if (NintendoInput.isEditorInputActiv)
+                isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+            else
+                isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+            if (isEnterExit)
+#else
+            if (Input.GetKeyDown(KeyCode.E))
+#endif
+            {
+                Debug.LogError($"<color=green> Shop Trigger Activate </color>");
+                MissionManager.instance.EnterShop(shopType, this.gameObject);
+            }
         }
     }
 }
