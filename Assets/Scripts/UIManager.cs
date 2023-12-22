@@ -40,7 +40,6 @@ namespace SBPScripts
         void Start()
         {
             Debug.LogError("UIManager Start");
-            _deliveryCompletPanel.CloseDeliveryComplet();
             instance = this;
             bicycleController = FindObjectOfType<BicycleController>();
             _staminaSlider.maxValue = StaminaManager.instance._staminaMaxAmount;

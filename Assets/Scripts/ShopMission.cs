@@ -6,6 +6,7 @@ using SBPScripts;
 using nn.hid;
 #endif
 using SickscoreGames.HUDNavigationSystem;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -20,6 +21,7 @@ public class ShopMission : MonoBehaviour
 
     public Sprite icoShop;
 
+    private bool _isPlayerInTrigger; 
     private void Start()
     {
         Invoke(nameof(SetShopIcon), .5f);
@@ -52,19 +54,44 @@ public class ShopMission : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (!_isPlayerInTrigger)
+            return;
+
+#if UNITY_SWITCH
+        bool isEnterExit;
+        if (NintendoInput.isEditorInputActiv)
+            isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
+        else
+            isEnterExit = Input.GetKeyDown(KeyCode.E);
+
+        if (isEnterExit)
+#else
+            if (Input.GetKeyDown(KeyCode.E))
+#endif
+        {
+            Debug.LogError($"<color=green> Shop Trigger Activate </color>");
+            MissionManager.instance.EnterShop(shopType, this.gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Contains("Player"))
         {
             // MissionManager.instance.CommandStart(shopType);
             MissionManager.instance.ShowPopapEnterExit(true);
+            _isPlayerInTrigger = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag.Contains("Player"))
+        {
             MissionManager.instance.ShowPopapEnterExit(false);
+            _isPlayerInTrigger = false;
+        }
         MissionManager.instance.ShowPopapExitBike(false);
     }
 
@@ -83,22 +110,6 @@ public class ShopMission : MonoBehaviour
             }
 
             MissionManager.instance.ShowPopapExitBike(false);
-
-#if UNITY_SWITCH
-            bool isEnterExit;
-            if (NintendoInput.isEditorInputActiv)
-                isEnterExit = NintendoInput.InputNpadButtonDown(NpadButton.A);
-            else
-                isEnterExit = Input.GetKeyDown(KeyCode.E);
-
-            if (isEnterExit)
-#else
-            if (Input.GetKeyDown(KeyCode.E))
-#endif
-            {
-                Debug.LogError($"<color=green> Shop Trigger Activate </color>");
-                MissionManager.instance.EnterShop(shopType, this.gameObject);
-            }
         }
     }
 }

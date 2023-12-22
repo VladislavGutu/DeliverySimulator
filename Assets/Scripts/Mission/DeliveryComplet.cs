@@ -17,10 +17,19 @@ public class DeliveryComplet : MonoBehaviour
     private Sprite[] _starsSprites;
     [SerializeField]
     private string[] _feedbackTexts;
+    
+    private Animator _animator;
 
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        this.gameObject.SetActive(false);
+    }
+    
     public void SetDeliveryComplet(int stars, int money)
     {
+        _animator.SetTrigger("Open");
         _moneyText.text = money.ToString();
         _feedbackText.text = _feedbackTexts[stars];
         _starsImage.sprite = _starsSprites[stars];
@@ -30,7 +39,14 @@ public class DeliveryComplet : MonoBehaviour
     
     public void CloseDeliveryComplet()
     {
-        this.gameObject.SetActive(false);
+        StartCoroutine(CloseDeliveryCompletCoroutine());
+    }
+    
+    private IEnumerator CloseDeliveryCompletCoroutine()
+    {
         EventSystem.current.SetSelectedGameObject(null);
+        _animator.SetTrigger("Close");
+        yield return new WaitForSeconds(1f);
+        this.gameObject.SetActive(false);
     }
 }
