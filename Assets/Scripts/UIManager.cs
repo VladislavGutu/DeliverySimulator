@@ -31,6 +31,8 @@ namespace SBPScripts
         private Animator _deliveryStartAnimator;
         
         private bool _isPause = false;
+
+        public GameObject _tutorialPanel;
         
         public bool IsPause
         {
@@ -40,6 +42,12 @@ namespace SBPScripts
         void Start()
         {
             Debug.LogError("UIManager Start");
+
+            if (PlayerPrefs.GetInt("FirstEnter") == 0)
+            {
+                _tutorialPanel.SetActive(true);
+            }
+            
             instance = this;
             bicycleController = FindObjectOfType<BicycleController>();
             _staminaSlider.maxValue = StaminaManager.instance._staminaMaxAmount;
@@ -117,7 +125,11 @@ namespace SBPScripts
         public void MainMenu()
         {
             Time.timeScale = 1;
+            
+            #if UNITY_SWITCH
             NintendoInput.isActivInput = false;
+            #endif
+            
             loadingPanel.SetActive(true);
             DOVirtual.DelayedCall(2f, () =>
             {
