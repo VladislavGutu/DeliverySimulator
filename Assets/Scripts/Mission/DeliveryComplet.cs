@@ -29,17 +29,19 @@ public class DeliveryComplet : MonoBehaviour
     
     public void SetDeliveryComplet(int stars, int money)
     {
+        this.gameObject.SetActive(true);
         _moneyText.text = money.ToString();
         _feedbackText.text = _feedbackTexts[stars];
         _starsImage.sprite = _starsSprites[stars];
-        this.gameObject.SetActive(true);
         //_animator.SetTrigger("Open");
+        Debug.LogError("SetDeliveryComplet");
         _animator.SetBool("isOpen", true);
-        EventSystem.current.SetSelectedGameObject(_deliveryCompletButton);
+        StartCoroutine(OpenDeliveryCompletCoroutine());
     }
     
     public void CloseDeliveryComplet()
     {
+        Debug.LogError("CloseDeliveryComplet");
         StartCoroutine(CloseDeliveryCompletCoroutine());
     }
     
@@ -50,5 +52,11 @@ public class DeliveryComplet : MonoBehaviour
         _animator.SetBool("isOpen", false);
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
+    }
+    private IEnumerator OpenDeliveryCompletCoroutine()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForSeconds(1f);
+        EventSystem.current.SetSelectedGameObject(_deliveryCompletButton);
     }
 }

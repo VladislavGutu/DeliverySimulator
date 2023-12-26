@@ -47,7 +47,6 @@ namespace SBPScripts
             if (PlayerPrefs.GetInt("FirstEnter") == 0)
             {
                 _isPause = true;
-                Time.timeScale = 0;
                 _tutorialPanel.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(tutorialBT.gameObject);
             }
@@ -151,6 +150,7 @@ namespace SBPScripts
         
         public void DeliveryComplet(int stars, int money)
         {
+            _deliveryCompletPanel.gameObject.SetActive(true);
             _deliveryCompletPanel.SetDeliveryComplet(stars, money);
         }
         
