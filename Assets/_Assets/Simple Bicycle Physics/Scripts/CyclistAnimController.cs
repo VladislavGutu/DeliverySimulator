@@ -115,14 +115,14 @@ namespace SBPScripts
                     tempAction = (NintendoInput.InputNpadButtonDown(NpadButton.Y) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0 && _isEnterBicycle);
+                                  0.2f && waitTime == 0 && _isEnterBicycle);
                 }
                 else
                 {
                     tempAction = (Input.GetKeyDown(KeyCode.Return) &&
                                   bicycleController.transform.InverseTransformDirection(bicycleController.rb.velocity)
                                       .z <=
-                                  0.1f && waitTime == 0 && _isEnterBicycle);
+                                  0.2f && waitTime == 0 && _isEnterBicycle);
                 }
 
                 if (tempAction)

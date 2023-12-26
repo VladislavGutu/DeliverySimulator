@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SBPScripts;
 using UnityEngine;
 
 public class TutorialHandler : MonoBehaviour
@@ -41,6 +42,8 @@ public class TutorialHandler : MonoBehaviour
 
     public void CloseTutorial()
     {
+        UIManager.instance.IsPause = false;
+        Time.timeScale = 1;
         gameObject.SetActive(false);
         PlayerPrefs.SetInt("FirstEnter",1);
     }

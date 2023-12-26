@@ -23,7 +23,7 @@ public class HouseFinishDeliver : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
+        if (other.gameObject.tag.Contains("Bike") && MissionManager.instance.actualHouse != null)
         {
             if (other.gameObject.GetComponent<BicycleStatus>() != null)
             {
@@ -36,7 +36,9 @@ public class HouseFinishDeliver : MonoBehaviour
             }
 
             MissionManager.instance.ShowPopapExitBike(false);
-
+        }
+        if (other.gameObject.tag.Contains("Player") && MissionManager.instance.actualHouse != null)
+        {
 #if UNITY_SWITCH
             bool isEnterExit;
             if (NintendoInput.isEditorInputActiv)

@@ -20,7 +20,7 @@ namespace SBPScripts
 
         private BicycleController bicycleController;
 
-        public Button missionBTN_Open, missionBTN_Close, selectBTmenu;
+        public Button missionBTN_Open, missionBTN_Close, selectBTmenu, tutorialBT;
         public GameObject missionPanel, missionContent, pausePanel, loadingPanel;
 
         public TextMeshProUGUI _textMoney;
@@ -37,6 +37,7 @@ namespace SBPScripts
         public bool IsPause
         {
             get => _isPause;
+            set => _isPause = value;
         }
         
         void Start()
@@ -45,7 +46,10 @@ namespace SBPScripts
 
             if (PlayerPrefs.GetInt("FirstEnter") == 0)
             {
+                _isPause = true;
+                Time.timeScale = 0;
                 _tutorialPanel.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(tutorialBT.gameObject);
             }
             
             instance = this;
@@ -70,7 +74,7 @@ namespace SBPScripts
             if(_isPause)
                 return;
 #if UNITY_SWITCH
-            if (NintendoInput.InputNpadButtonDown(NpadButton.Plus))
+            if (NintendoInput.InputNpadButtonDown(NpadButton.Plus) || Input.GetKeyDown(KeyCode.Escape))
             {
                 _isPause = true;
                 Time.timeScale = 0;
@@ -99,7 +103,7 @@ namespace SBPScripts
 
             _staminaSlider.value = StaminaManager.instance._staminaCurrentAmount;
 #if UNITY_SWITCH
-            if (NintendoInput.InputNpadButtonDown(NpadButton.Minus))
+            if (NintendoInput.InputNpadButtonDown(NpadButton.Minus) || Input.GetKeyDown(KeyCode.Tab))
             {
                 if (missionPanel.activeInHierarchy)
                 {

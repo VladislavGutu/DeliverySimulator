@@ -98,7 +98,8 @@ public class ShopMission : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag.Contains("Player"))
+        
+        if (other.gameObject.tag.Contains("Bike"))
         {
             if (other.gameObject.GetComponent<BicycleStatus>() != null)
             {
@@ -111,6 +112,10 @@ public class ShopMission : MonoBehaviour
             }
 
             MissionManager.instance.ShowPopapExitBike(false);
+        }
+        
+        if (other.gameObject.tag.Contains("Player"))
+        {
             
 #if UNITY_SWITCH
             bool isEnterExit;
